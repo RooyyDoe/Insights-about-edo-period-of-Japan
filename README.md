@@ -1,71 +1,50 @@
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# Culture insights in the Edo period of Japan
 
----
+This visualization provides a clarification of Japanese articles in the Edo period. This imperial period takes place from 1600 to 1868 in Japan. The objects are displayed scattered on a timeline and arranged in the Early, Middle or Late Edo period. The various emperors who have ruled in this period will also be indicated on this timeline. In this way the users can clearly see from which government period the various objects come. The timeline can be used interactively because a time period can be clicked and the Japanese objects will come forward that belong to this period.
 
-# svelte app
+The whole process that I made within this project will all be documented in the [wiki](https://github.com/RooyyDoe/frontend-applications/wiki) of my repository
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+## Screenshots
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+[![][inspiration-cover]][inspiration-link]
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
+## Assignment
+
+Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
+
+## Installation
+
+**Clone the repository of the project**
+```
+git clone https://github.com/RooyyDoe/frontend-applications.git
 ```
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
+**Npm packages installing**
+```
 npm install
 ```
 
-...then start [Rollup](https://rollupjs.org):
+## Usage
 
-```bash
-npm run dev
+**Run code**
+```
+npm run start
 ```
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+**Url for the application**
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
+```
+localhost:3000 // host is now available
 ```
 
-Then, from within your project folder:
+## Communication
 
-```bash
-cd public
-now
-```
+* [GitHub](https://github.com/RooyyDoe/) — Main source of information, assignments, important dates, and more
+* [Slack](https://cmdinformationdesign.slack.com/) — General chatter and Q&A
+* [Brightspace](https://dlo.mijnhva.nl/d2l/home/32180) — Assessment scheduling
 
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
+# License
 
-### With [surge](https://surge.sh/)
+More information over [License](https://help.github.com/en/articles/licensing-a-repository)
 
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+[MIT](https://github.com/RooyyDoe/frontend-applications/blob/master/LICENSE.txt) © [Roy Kuijper](https://github.com/RooyyDoe)
