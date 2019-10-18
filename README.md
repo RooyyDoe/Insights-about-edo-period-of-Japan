@@ -6,7 +6,7 @@ The whole process that I made within this project will all be documented in the 
 
 ## Screenshots
 
-![First-Drawing](https://imgur.com/a/3MsXoM7)
+![Imgur](https://i.imgur.com/Rfy6mlp.jpg)
 
 ## Assignment
 
