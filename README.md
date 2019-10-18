@@ -6,11 +6,11 @@ The whole process that I made within this project will all be documented in the 
 
 ## Screenshots
 
-[![][inspiration-cover]][inspiration-link]
+![First-Drawing](https://imgur.com/a/3MsXoM7)
 
 ## Assignment
 
-Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
+Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.git 
 
 ## Installation
 
