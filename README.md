@@ -7,7 +7,6 @@ The whole process that I made within this project will all be documented in the 
 ## Screenshots
 
 ![Imgur](https://i.imgur.com/g4U3zu1.jpg)
-<<<<<<< HEAD
 
 - [Culture insights in the Edo period of Japan](#culture-insights-in-the-edo-period-of-japan)
   - [Screenshots](#screenshots)
@@ -18,8 +17,6 @@ The whole process that I made within this project will all be documented in the 
   - [Sources](#sources)
   - [Communication](#communication)
 - [License](#license)
-=======
->>>>>>> 3143d2953b111ba504b349f2708a10ffb99a5afe
 
 ## Assignment
 
