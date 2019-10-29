@@ -56,7 +56,7 @@ I made use of the following API:
 API QUERY *Loading....*
 ```
 
-This API allows you to get data of different historical factors. This can be objects or pictures but also events that happend in the history. We have all gotten an invidual endpoint to use this database.
+This API allows you to get data of different historical events. This can be objects or pictures but also events that happend in the history. We have all gotten an invidual endpoint to use this database.
 
 ## Sources
 * [Svelte Documentation](https://svelte.dev/tutorial/basics)

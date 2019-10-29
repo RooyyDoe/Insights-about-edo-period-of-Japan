@@ -1,4 +1,5 @@
 <script>
+    import Getdata from '../../data/getdata.js';
 	export let name;
 </script>
 
