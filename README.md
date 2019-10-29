@@ -6,11 +6,21 @@ The whole process that I made within this project will all be documented in the 
 
 ## Screenshots
 
-![Imgur](https://i.imgur.com/Rfy6mlp.jpg)
+![Imgur](https://i.imgur.com/g4U3zu1.jpg)
+
+- [Culture insights in the Edo period of Japan](#culture-insights-in-the-edo-period-of-japan)
+  - [Screenshots](#screenshots)
+  - [Assignment](#assignment)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [API](#api)
+  - [Sources](#sources)
+  - [Communication](#communication)
+- [License](#license)
 
 ## Assignment
 
-Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together
+In this front-end course I needed to create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
 
 ## Installation
 
@@ -28,14 +38,29 @@ npm install
 
 **Run code**
 ```
-npm run start
+npm run dev
 ```
 
 **Url for the application**
 
 ```
-localhost:3000 // host is now available
+localhost:5000 // host is now available
 ```
+
+## API
+I made use of the following API:
+
+* [GVN](https://data.netwerkdigitaalerfgoed.nl/)
+
+```
+API QUERY *Loading....*
+```
+
+This API allows you to get data of different historical factors. This can be objects or pictures but also events that happend in the history. We have all gotten an invidual endpoint to use this database.
+
+## Sources
+* [Svelte Documentation](https://svelte.dev/tutorial/basics)
+* Loading....
 
 ## Communication
 
