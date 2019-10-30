@@ -88,7 +88,7 @@ I made use of the following API:
 
 In this query I am asking for different kinds of data. The most important data that I need from this database is the **year period(jaartal)** between 1611 - 1868. In this period I need every **Title** and **Image**. I am also filtering on the origin and period, so I want every object that is in this database that has the origin: 'Japan' and period: 'Edo (Japanse periode)'. 
 
-As main concept I wanted to give an explaination about different objects out of this database, but with lack of certain database fields by some objects. A lot of objects don't have any description or just missing some extra information. When the new database is updated and developed more this can always change. I made it so the users only can see the Title, Year and Image for now..
+As main concept I wanted to give an explanation about different objects out of this database, but with lack of certain database fields by some objects. A lot of objects don't have any description or just missing some extra information. When the new database is updated and developed more this can always change. I made it so the users only can see the Title, Year and Image for now..
 
 
 ## Sources
