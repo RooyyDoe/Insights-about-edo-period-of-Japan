@@ -47,6 +47,8 @@ npm run dev
 localhost:5000 // host is now available
 ```
 
+Live at: https://frontend-applications-svelte.netlify.com/
+
 ## API
 I made use of the following API:
 
