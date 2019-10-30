@@ -6,14 +6,14 @@ The whole process that I made within this project will all be documented in the 
 
 ## Screenshots
 
-![Imgur](https://i.imgur.com/g4U3zu1.jpg)
+![Imgur](https://i.imgur.com/geEyLOZ.jpg)
 
 - [Culture insights in the Edo period of Japan](#culture-insights-in-the-edo-period-of-japan)
   - [Screenshots](#screenshots)
   - [Assignment](#assignment)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [API](#api)
+    - [Usage](#usage)
+    - [API](#api)
   - [Sources](#sources)
   - [Communication](#communication)
 - [License](#license)
@@ -34,7 +34,7 @@ git clone https://github.com/RooyyDoe/frontend-applications.git
 npm install
 ```
 
-## Usage
+### Usage
 
 **Run code**
 ```
@@ -47,28 +47,58 @@ npm run dev
 localhost:5000 // host is now available
 ```
 
-Live at: https://frontend-applications-svelte.netlify.com/
+**Demo** is also live at: https://frontend-applications-svelte.netlify.com/
 
 ## API
+This API allows you to get data of different historical events. This can be objects or pictures that are comming out of the history of this world. We have all gotten an invidual endpoint to use this database and get certain data from this database. 
+
 I made use of the following API:
 
+<details>
 * [GVN](https://data.netwerkdigitaalerfgoed.nl/)
 
 ```
-API QUERY *Loading....*
+	PREFIX dc: <http://purl.org/dc/elements/1.1/>
+	PREFIX dct: <http://purl.org/dc/terms/>
+	PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+	PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	
+	SELECT ?cho (SAMPLE(?title) AS ?uniqueTitle) (SAMPLE(?img) AS ?uniqueImage) (SAMPLE(?periode) AS ?uniquePeriod) (SAMPLE(?  herkomstLabel) AS ?uniqueHerkomstLabel) (SAMPLE(?jaartal) AS ?uniqueJaartal) WHERE {
+	   <https://hdl.handle.net/20.500.11840/termmaster4400> skos:narrower* ?concept .
+	   ?concept skos:prefLabel ?periode .
+	   VALUES ?periode { "Edo (Japanse periode)" }
+	  
+	   ?cho dc:title ?title .
+	   ?cho edm:isShownBy ?img .
+	  
+	   ?cho dct:created ?jaartal .
+	   filter(xsd:integer(?jaartal) >= 1611 && xsd:integer(?jaartal) <= 1868)
+	  
+	   ?cho dct:spatial ?herkomst .
+	   ?herkomst skos:prefLabel ?herkomstLabel .
+	   VALUES ?herkomstLabel { "Japan" } .
+	  
+	   FILTER langMatches(lang(?title), "ned")
+	} GROUP BY ?cho
 ```
+</details>
 
-This API allows you to get data of different historical events. This can be objects or pictures but also events that happend in the history. We have all gotten an invidual endpoint to use this database.
+
 
 ## Sources
-* [Svelte Documentation](https://svelte.dev/tutorial/basics)
-* Loading....
+* [Svelte Documentation](https://svelte.dev/tutorial/basics) - Basic documentation of Svelte.
+* [Svelte Darkside Docs](https://svelte.dev/docs#Before_we_begin) - Here they go in way deeper on what Svelte can do.
+* [Styling idea's](https://freefrontend.com/) - Where I got most of my styling idea's from.
+* [Svelte Documentation](https://objectcomputing.com/resources/publications/sett/july-2019-web-dev-simplified-with-svelte) - recommended by Svelte developers (Discord).
+* [Svelte Discord](https://discord.gg/yy75DKs) — For questions and updates on the framework.
 
-## Communication
+## Credits
 
-* [GitHub](https://github.com/RooyyDoe/) — Main source of information, assignments, important dates, and more
-* [Slack](https://cmdinformationdesign.slack.com/) — General chatter and Q&A
-* [Brightspace](https://dlo.mijnhva.nl/d2l/home/32180) — Assessment scheduling
+* [Help from Thijs Spijker](https://github.com/iSirThijs) - Explained a lot of difficult programming stuff and good guy to talk against when u have a problem.
+* [Help from Kris Kuijpers](https://github.com/kriskuiper) — Tried to explain to me how fetch works and how I need to use the reduce function. Also lets you see things from another perspective.
+* [Help from Stefan Gerrits](https://github.com/StefanGerrits2) — Did alot of programming together and watched in each other code to fix certain things. Also did the deploying of our apps together.
+* [Help from Leroy van Biljouw](https://github.com/SqueezyDough) - He helpt me look on a different way to my project while I was thinking way to hard for what I needed to do. Also showed me how he did he's map structure and I got inspired
 
 # License
 
