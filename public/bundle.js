@@ -75,6 +75,12 @@ var app = (function (exports) {
     function detach(node) {
         node.parentNode.removeChild(node);
     }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
     function element(name) {
         return document.createElement(name);
     }
@@ -112,6 +118,9 @@ var app = (function (exports) {
     }
     function children(element) {
         return Array.from(element.childNodes);
+    }
+    function set_style(node, key, value, important) {
+        node.style.setProperty(key, value, important ? 'important' : '');
     }
     function custom_event(type, detail) {
         const e = document.createEvent('CustomEvent');
@@ -1857,9 +1866,9 @@ var app = (function (exports) {
 
     const file$1 = "src/App.svelte";
 
-    // (17:0) <Router url="{url}">
+    // (38:0) <Router url="{url}">
     function create_default_slot(ctx) {
-    	var div, t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, current;
+    	var div, t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, current;
 
     	var route0 = new Route({
     		props: { path: "/", component: Home },
@@ -1901,11 +1910,6 @@ var app = (function (exports) {
     	});
 
     	var route6 = new Route({
-    		props: { path: "Goyozei", component: Gomizunoo },
-    		$$inline: true
-    	});
-
-    	var route7 = new Route({
     		props: {
     		path: "Higashiyama",
     		component: Gomizunoo
@@ -1913,37 +1917,40 @@ var app = (function (exports) {
     		$$inline: true
     	});
 
-    	var route8 = new Route({
+    	var route7 = new Route({
     		props: { path: "Kokaku", component: Gomizunoo },
     		$$inline: true
     	});
 
-    	var route9 = new Route({
+    	var route8 = new Route({
     		props: { path: "Komei", component: Gomizunoo },
     		$$inline: true
     	});
 
-    	var route10 = new Route({
+    	var route9 = new Route({
     		props: { path: "Meisho", component: Gomizunoo },
     		$$inline: true
     	});
 
+    	var route10 = new Route({
+    		props: {
+    		path: "Momozono",
+    		component: Gomizunoo
+    	},
+    		$$inline: true
+    	});
+
     	var route11 = new Route({
-    		props: { path: "Momozono", component: Gomizunoo },
+    		props: { path: "Ninko", component: Gomizunoo },
     		$$inline: true
     	});
 
     	var route12 = new Route({
-    		props: { path: "Niko", component: Gomizunoo },
-    		$$inline: true
-    	});
-
-    	var route13 = new Route({
     		props: { path: "Reigen", component: Gomizunoo },
     		$$inline: true
     	});
 
-    	var route14 = new Route({
+    	var route13 = new Route({
     		props: {
     		path: "Sakuramachi",
     		component: Gomizunoo
@@ -1981,9 +1988,7 @@ var app = (function (exports) {
     			route12.$$.fragment.c();
     			t12 = space();
     			route13.$$.fragment.c();
-    			t13 = space();
-    			route14.$$.fragment.c();
-    			add_location(div, file$1, 17, 2, 249);
+    			add_location(div, file$1, 38, 2, 641);
     		},
 
     		m: function mount(target, anchor) {
@@ -2015,8 +2020,6 @@ var app = (function (exports) {
     			mount_component(route12, div, null);
     			append_dev(div, t12);
     			mount_component(route13, div, null);
-    			append_dev(div, t13);
-    			mount_component(route14, div, null);
     			current = true;
     		},
 
@@ -2052,8 +2055,6 @@ var app = (function (exports) {
 
     			transition_in(route13.$$.fragment, local);
 
-    			transition_in(route14.$$.fragment, local);
-
     			current = true;
     		},
 
@@ -2072,7 +2073,6 @@ var app = (function (exports) {
     			transition_out(route11.$$.fragment, local);
     			transition_out(route12.$$.fragment, local);
     			transition_out(route13.$$.fragment, local);
-    			transition_out(route14.$$.fragment, local);
     			current = false;
     		},
 
@@ -2108,16 +2108,14 @@ var app = (function (exports) {
     			destroy_component(route12);
 
     			destroy_component(route13);
-
-    			destroy_component(route14);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(17:0) <Router url=\"{url}\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(38:0) <Router url=\"{url}\">", ctx });
     	return block;
     }
 
     function create_fragment$3(ctx) {
-    	var h1, t0, t1, t2, t3, current;
+    	var current;
 
     	var router = new Router({
     		props: {
@@ -2130,14 +2128,7 @@ var app = (function (exports) {
 
     	const block = {
     		c: function create() {
-    			h1 = element("h1");
-    			t0 = text("Hello ");
-    			t1 = text(ctx.name);
-    			t2 = text("!");
-    			t3 = space();
     			router.$$.fragment.c();
-    			attr_dev(h1, "class", "svelte-1l5hwhy");
-    			add_location(h1, file$1, 14, 0, 202);
     		},
 
     		l: function claim(nodes) {
@@ -2145,20 +2136,11 @@ var app = (function (exports) {
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, h1, anchor);
-    			append_dev(h1, t0);
-    			append_dev(h1, t1);
-    			append_dev(h1, t2);
-    			insert_dev(target, t3, anchor);
     			mount_component(router, target, anchor);
     			current = true;
     		},
 
     		p: function update(changed, ctx) {
-    			if (!current || changed.name) {
-    				set_data_dev(t1, ctx.name);
-    			}
-
     			var router_changes = {};
     			if (changed.url) router_changes.url = ctx.url;
     			if (changed.$$scope) router_changes.$$scope = { changed, ctx };
@@ -2178,11 +2160,6 @@ var app = (function (exports) {
     		},
 
     		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach_dev(h1);
-    				detach_dev(t3);
-    			}
-
     			destroy_component(router, detaching);
     		}
     	};
@@ -2192,49 +2169,33 @@ var app = (function (exports) {
 
     function instance$3($$self, $$props, $$invalidate) {
     	
-    	let { name, url = "" } = $$props;
+    	let { url = "" } = $$props;
 
-    	const writable_props = ['name', 'url'];
+    	const writable_props = ['url'];
     	Object.keys($$props).forEach(key => {
     		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$set = $$props => {
-    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
     		if ('url' in $$props) $$invalidate('url', url = $$props.url);
     	};
 
     	$$self.$capture_state = () => {
-    		return { name, url };
+    		return { url };
     	};
 
     	$$self.$inject_state = $$props => {
-    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
     		if ('url' in $$props) $$invalidate('url', url = $$props.url);
     	};
 
-    	return { name, url };
+    	return { url };
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, ["name", "url"]);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, ["url"]);
     		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "App", options, id: create_fragment$3.name });
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.name === undefined && !('name' in props)) {
-    			console.warn("<App> was created without expected prop 'name'");
-    		}
-    	}
-
-    	get name() {
-    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set name(value) {
-    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get url() {
@@ -2246,367 +2207,522 @@ var app = (function (exports) {
     	}
     }
 
-    /* src/pages/Home.svelte generated by Svelte v3.12.1 */
+    /* src/components/nav.svelte generated by Svelte v3.12.1 */
 
-    const file$2 = "src/pages/Home.svelte";
+    const file$2 = "src/components/nav.svelte";
 
-    // (17:4) <Link to="Gokomyo">
+    // (220:8) <Link to="Gomizunoo">
     function create_default_slot_14(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Gokomyo";
-    			add_location(p, file$2, 16, 23, 213);
+    			p.textContent = "1611–1629 Go-Mizunoo";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 220, 12, 3821);
+    			attr_dev(img, "class", "bottom svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Emperor_Go-Mizunoo.jpg");
+    			attr_dev(img, "alt", "Go-Mizunoo");
+    			add_location(img, file$2, 221, 12, 3875);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_14.name, type: "slot", source: "(17:4) <Link to=\"Gokomyo\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_14.name, type: "slot", source: "(220:8) <Link to=\"Gomizunoo\">", ctx });
     	return block;
     }
 
-    // (18:4) <Link to="Gomizunoo">
+    // (226:8) <Link to="Meisho">
     function create_default_slot_13(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Gomizunoo";
-    			add_location(p, file$2, 17, 25, 260);
+    			p.textContent = "1629–1643 Meishō";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 226, 12, 4050);
+    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Meisho_of_Japan.jpg");
+    			attr_dev(img, "alt", "Meishō");
+    			add_location(img, file$2, 227, 12, 4100);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_13.name, type: "slot", source: "(18:4) <Link to=\"Gomizunoo\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_13.name, type: "slot", source: "(226:8) <Link to=\"Meisho\">", ctx });
     	return block;
     }
 
-    // (19:1) <Link to="Gomomozono">
+    // (232:8) <Link to="Gokomyo">
     function create_default_slot_12(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Gomomozono";
-    			add_location(p, file$2, 18, 23, 307);
+    			p.textContent = "1643–1654 Go-Kōmyō";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 232, 12, 4264);
+    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Emperor_Go-Kōmyō.jpg");
+    			attr_dev(img, "alt", "Go-Kōmyō");
+    			add_location(img, file$2, 233, 12, 4316);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_12.name, type: "slot", source: "(19:1) <Link to=\"Gomomozono\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_12.name, type: "slot", source: "(232:8) <Link to=\"Gokomyo\">", ctx });
     	return block;
     }
 
-    // (20:4) <Link to="Gosai">
+    // (238:8) <Link to="Gosai">
     function create_default_slot_11(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Gosai";
-    			add_location(p, file$2, 19, 21, 353);
+    			p.textContent = "1655–1663 Go-Sai";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 238, 12, 4482);
+    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Emperor_Go-Sai.jpg");
+    			attr_dev(img, "alt", "Go-Sai");
+    			add_location(img, file$2, 239, 12, 4532);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_11.name, type: "slot", source: "(20:4) <Link to=\"Gosai\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_11.name, type: "slot", source: "(238:8) <Link to=\"Gosai\">", ctx });
     	return block;
     }
 
-    // (21:1) <Link to="Gosakuramachi">
+    // (244:8) <Link to="Reigen">
     function create_default_slot_10(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Gosakuramachi";
-    			add_location(p, file$2, 20, 26, 399);
+    			p.textContent = "1663–1687 Reigen";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 244, 12, 4693);
+    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Emperor_Reigen.jpg");
+    			attr_dev(img, "alt", "Reigen");
+    			add_location(img, file$2, 245, 12, 4743);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_10.name, type: "slot", source: "(21:1) <Link to=\"Gosakuramachi\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_10.name, type: "slot", source: "(244:8) <Link to=\"Reigen\">", ctx });
     	return block;
     }
 
-    // (22:4) <Link to="Goyozei">
+    // (250:8) <Link to="Higashiyama">
     function create_default_slot_9(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Goyozei";
-    			add_location(p, file$2, 21, 23, 450);
+    			p.textContent = "1687–1709 Higashiyama";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 250, 12, 4914);
+    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(img, "src", "images/800px-Emperor_Higashiyama.jpg");
+    			attr_dev(img, "alt", "Higashiyama");
+    			add_location(img, file$2, 251, 12, 4969);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_9.name, type: "slot", source: "(22:4) <Link to=\"Goyozei\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_9.name, type: "slot", source: "(250:8) <Link to=\"Higashiyama\">", ctx });
     	return block;
     }
 
-    // (23:1) <Link to="Higashiyama">
+    // (256:8) <Link to="Nakamikado">
     function create_default_slot_8(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Higashiyama";
-    			add_location(p, file$2, 22, 24, 496);
+    			p.textContent = "1709–1735 Nakamikado";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 256, 12, 5157);
+    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Emperor_Nakamikado.jpg");
+    			attr_dev(img, "alt", "Nakamikado");
+    			add_location(img, file$2, 257, 12, 5211);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_8.name, type: "slot", source: "(23:1) <Link to=\"Higashiyama\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_8.name, type: "slot", source: "(256:8) <Link to=\"Nakamikado\">", ctx });
     	return block;
     }
 
-    // (24:4) <Link to="Kokaku">
+    // (262:8) <Link to="Sakuramachi">
     function create_default_slot_7(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Kokaku";
-    			add_location(p, file$2, 23, 22, 544);
+    			p.textContent = "1735–1747 Sakuramachi";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 262, 12, 5393);
+    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Emperor_Sakuramachi.jpg");
+    			attr_dev(img, "alt", "Sakuramachi");
+    			add_location(img, file$2, 263, 12, 5448);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_7.name, type: "slot", source: "(24:4) <Link to=\"Kokaku\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_7.name, type: "slot", source: "(262:8) <Link to=\"Sakuramachi\">", ctx });
     	return block;
     }
 
-    // (25:1) <Link to="Komei">
+    // (268:8) <Link to="Momozono">
     function create_default_slot_6(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Komei";
-    			add_location(p, file$2, 24, 18, 583);
+    			p.textContent = "1747–1762 Momozono";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 268, 12, 5623);
+    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(img, "src", "images/1280px-Emperor_Momozono.jpg");
+    			attr_dev(img, "alt", "Momozono");
+    			add_location(img, file$2, 269, 12, 5675);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_6.name, type: "slot", source: "(25:1) <Link to=\"Komei\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_6.name, type: "slot", source: "(268:8) <Link to=\"Momozono\">", ctx });
     	return block;
     }
 
-    // (26:4) <Link to="Meisho">
+    // (274:8) <Link to="Gosakuramachi">
     function create_default_slot_5(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Meisho";
-    			add_location(p, file$2, 25, 22, 625);
+    			p.textContent = "1762–1771 Go-Sakuramachi";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 274, 12, 5864);
+    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Empress_Go-Sakuramachi.jpg");
+    			attr_dev(img, "alt", "Go-Sakuramachi");
+    			add_location(img, file$2, 275, 12, 5922);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_5.name, type: "slot", source: "(26:4) <Link to=\"Meisho\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_5.name, type: "slot", source: "(274:8) <Link to=\"Gosakuramachi\">", ctx });
     	return block;
     }
 
-    // (27:1) <Link to="Momozono">
+    // (280:8) <Link to="Gomomozono">
     function create_default_slot_4(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Momozono";
-    			add_location(p, file$2, 26, 21, 667);
+    			p.textContent = "1771–1779 Go-Momozono";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 280, 12, 6110);
+    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(img, "src", "images/1024px-Emperor_Go-Momozono.jpg");
+    			attr_dev(img, "alt", "Go-Momozono");
+    			add_location(img, file$2, 281, 12, 6165);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_4.name, type: "slot", source: "(27:1) <Link to=\"Momozono\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_4.name, type: "slot", source: "(280:8) <Link to=\"Gomomozono\">", ctx });
     	return block;
     }
 
-    // (28:1) <Link to="Niko">
+    // (286:8) <Link to="Kokaku">
     function create_default_slot_3(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Niko";
-    			add_location(p, file$2, 27, 17, 707);
+    			p.textContent = "1780–1817 Kōkaku";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 286, 12, 6343);
+    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Emperor_Kōkaku.jpg");
+    			attr_dev(img, "alt", "Kōkaku");
+    			add_location(img, file$2, 287, 12, 6393);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_3.name, type: "slot", source: "(28:1) <Link to=\"Niko\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_3.name, type: "slot", source: "(286:8) <Link to=\"Kokaku\">", ctx });
     	return block;
     }
 
-    // (29:4) <Link to="Reigen">
+    // (292:8) <Link to="Ninko">
     function create_default_slot_2(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Reigen";
-    			add_location(p, file$2, 28, 22, 748);
+    			p.textContent = "1817–1846 Ninkō";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			add_location(p, file$2, 292, 12, 6555);
+    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(img, "src", "images/Emperor_Ninkō.jpg");
+    			attr_dev(img, "alt", "Ninkō");
+    			add_location(img, file$2, 293, 12, 6604);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(29:4) <Link to=\"Reigen\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(292:8) <Link to=\"Ninko\">", ctx });
     	return block;
     }
 
-    // (30:1) <Link to="Sakuramachi">
+    // (298:8) <Link to="Komei">
     function create_default_slot_1(ctx) {
-    	var p;
+    	var p, t_1, img;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Sakuramachi";
-    			add_location(p, file$2, 29, 24, 793);
+    			p.textContent = "1846–1867 Kōmei";
+    			t_1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			set_style(p, "color", "white");
+    			add_location(p, file$2, 298, 12, 6764);
+    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(img, "src", "images/800px-The_Emperor_Komei.jpg");
+    			attr_dev(img, "alt", "Kōmei");
+    			add_location(img, file$2, 299, 12, 6834);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			insert_dev(target, t_1, anchor);
+    			insert_dev(target, img, anchor);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(p);
+    				detach_dev(t_1);
+    				detach_dev(img);
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(30:1) <Link to=\"Sakuramachi\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(298:8) <Link to=\"Komei\">", ctx });
     	return block;
     }
 
-    // (15:0) <Router url="{url}">
+    // (217:0) <Router url="{url}">
     function create_default_slot$1(ctx) {
-    	var nav, t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, current;
+    	var nav, div0, t0, div1, t1, div2, t2, div3, t3, div4, t4, div5, t5, div6, t6, div7, t7, div8, t8, div9, t9, div10, t10, div11, t11, div12, t12, div13, current;
 
     	var link0 = new Link({
     		props: {
-    		to: "Gokomyo",
+    		to: "Gomizunoo",
     		$$slots: { default: [create_default_slot_14] },
     		$$scope: { ctx }
     	},
@@ -2615,7 +2731,7 @@ var app = (function (exports) {
 
     	var link1 = new Link({
     		props: {
-    		to: "Gomizunoo",
+    		to: "Meisho",
     		$$slots: { default: [create_default_slot_13] },
     		$$scope: { ctx }
     	},
@@ -2624,7 +2740,7 @@ var app = (function (exports) {
 
     	var link2 = new Link({
     		props: {
-    		to: "Gomomozono",
+    		to: "Gokomyo",
     		$$slots: { default: [create_default_slot_12] },
     		$$scope: { ctx }
     	},
@@ -2642,7 +2758,7 @@ var app = (function (exports) {
 
     	var link4 = new Link({
     		props: {
-    		to: "Gosakuramachi",
+    		to: "Reigen",
     		$$slots: { default: [create_default_slot_10] },
     		$$scope: { ctx }
     	},
@@ -2651,7 +2767,7 @@ var app = (function (exports) {
 
     	var link5 = new Link({
     		props: {
-    		to: "Goyozei",
+    		to: "Higashiyama",
     		$$slots: { default: [create_default_slot_9] },
     		$$scope: { ctx }
     	},
@@ -2660,7 +2776,7 @@ var app = (function (exports) {
 
     	var link6 = new Link({
     		props: {
-    		to: "Higashiyama",
+    		to: "Nakamikado",
     		$$slots: { default: [create_default_slot_8] },
     		$$scope: { ctx }
     	},
@@ -2669,7 +2785,7 @@ var app = (function (exports) {
 
     	var link7 = new Link({
     		props: {
-    		to: "Kokaku",
+    		to: "Sakuramachi",
     		$$slots: { default: [create_default_slot_7] },
     		$$scope: { ctx }
     	},
@@ -2678,7 +2794,7 @@ var app = (function (exports) {
 
     	var link8 = new Link({
     		props: {
-    		to: "Komei",
+    		to: "Momozono",
     		$$slots: { default: [create_default_slot_6] },
     		$$scope: { ctx }
     	},
@@ -2687,7 +2803,7 @@ var app = (function (exports) {
 
     	var link9 = new Link({
     		props: {
-    		to: "Meisho",
+    		to: "Gosakuramachi",
     		$$slots: { default: [create_default_slot_5] },
     		$$scope: { ctx }
     	},
@@ -2696,7 +2812,7 @@ var app = (function (exports) {
 
     	var link10 = new Link({
     		props: {
-    		to: "Momozono",
+    		to: "Gomomozono",
     		$$slots: { default: [create_default_slot_4] },
     		$$scope: { ctx }
     	},
@@ -2705,7 +2821,7 @@ var app = (function (exports) {
 
     	var link11 = new Link({
     		props: {
-    		to: "Niko",
+    		to: "Kokaku",
     		$$slots: { default: [create_default_slot_3] },
     		$$scope: { ctx }
     	},
@@ -2714,7 +2830,7 @@ var app = (function (exports) {
 
     	var link12 = new Link({
     		props: {
-    		to: "Reigen",
+    		to: "Ninko",
     		$$slots: { default: [create_default_slot_2] },
     		$$scope: { ctx }
     	},
@@ -2723,7 +2839,7 @@ var app = (function (exports) {
 
     	var link13 = new Link({
     		props: {
-    		to: "Sakuramachi",
+    		to: "Komei",
     		$$slots: { default: [create_default_slot_1] },
     		$$scope: { ctx }
     	},
@@ -2733,65 +2849,121 @@ var app = (function (exports) {
     	const block = {
     		c: function create() {
     			nav = element("nav");
+    			div0 = element("div");
     			link0.$$.fragment.c();
     			t0 = space();
+    			div1 = element("div");
     			link1.$$.fragment.c();
     			t1 = space();
+    			div2 = element("div");
     			link2.$$.fragment.c();
     			t2 = space();
+    			div3 = element("div");
     			link3.$$.fragment.c();
     			t3 = space();
+    			div4 = element("div");
     			link4.$$.fragment.c();
     			t4 = space();
+    			div5 = element("div");
     			link5.$$.fragment.c();
     			t5 = space();
+    			div6 = element("div");
     			link6.$$.fragment.c();
     			t6 = space();
+    			div7 = element("div");
     			link7.$$.fragment.c();
     			t7 = space();
+    			div8 = element("div");
     			link8.$$.fragment.c();
     			t8 = space();
+    			div9 = element("div");
     			link9.$$.fragment.c();
     			t9 = space();
+    			div10 = element("div");
     			link10.$$.fragment.c();
     			t10 = space();
+    			div11 = element("div");
     			link11.$$.fragment.c();
     			t11 = space();
+    			div12 = element("div");
     			link12.$$.fragment.c();
     			t12 = space();
+    			div13 = element("div");
     			link13.$$.fragment.c();
-    			add_location(nav, file$2, 15, 2, 184);
+    			attr_dev(div0, "class", "animate gomizunoo svelte-1oiivp4");
+    			add_location(div0, file$2, 218, 4, 3747);
+    			attr_dev(div1, "class", "animate meisho svelte-1oiivp4");
+    			add_location(div1, file$2, 224, 4, 3982);
+    			attr_dev(div2, "class", "animate gokomyo svelte-1oiivp4");
+    			add_location(div2, file$2, 230, 4, 4194);
+    			attr_dev(div3, "class", "animate gosai svelte-1oiivp4");
+    			add_location(div3, file$2, 236, 4, 4416);
+    			attr_dev(div4, "class", "animate reigen svelte-1oiivp4");
+    			add_location(div4, file$2, 242, 4, 4625);
+    			attr_dev(div5, "class", "animate higashiyama svelte-1oiivp4");
+    			add_location(div5, file$2, 248, 4, 4836);
+    			attr_dev(div6, "class", "animate nakamikado svelte-1oiivp4");
+    			add_location(div6, file$2, 254, 4, 5081);
+    			attr_dev(div7, "class", "animate sakuramachi svelte-1oiivp4");
+    			add_location(div7, file$2, 260, 4, 5315);
+    			attr_dev(div8, "class", "animate momozono svelte-1oiivp4");
+    			add_location(div8, file$2, 266, 4, 5551);
+    			attr_dev(div9, "class", "animate gosakuramachi svelte-1oiivp4");
+    			add_location(div9, file$2, 272, 4, 5782);
+    			attr_dev(div10, "class", "animate gomomozono svelte-1oiivp4");
+    			add_location(div10, file$2, 278, 4, 6034);
+    			attr_dev(div11, "class", "animate kokaku svelte-1oiivp4");
+    			add_location(div11, file$2, 284, 4, 6275);
+    			attr_dev(div12, "class", "animate ninko svelte-1oiivp4");
+    			add_location(div12, file$2, 290, 4, 6489);
+    			attr_dev(div13, "class", "animate komei svelte-1oiivp4");
+    			add_location(div13, file$2, 296, 4, 6698);
+    			add_location(nav, file$2, 217, 2, 3736);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, nav, anchor);
-    			mount_component(link0, nav, null);
+    			append_dev(nav, div0);
+    			mount_component(link0, div0, null);
     			append_dev(nav, t0);
-    			mount_component(link1, nav, null);
+    			append_dev(nav, div1);
+    			mount_component(link1, div1, null);
     			append_dev(nav, t1);
-    			mount_component(link2, nav, null);
+    			append_dev(nav, div2);
+    			mount_component(link2, div2, null);
     			append_dev(nav, t2);
-    			mount_component(link3, nav, null);
+    			append_dev(nav, div3);
+    			mount_component(link3, div3, null);
     			append_dev(nav, t3);
-    			mount_component(link4, nav, null);
+    			append_dev(nav, div4);
+    			mount_component(link4, div4, null);
     			append_dev(nav, t4);
-    			mount_component(link5, nav, null);
+    			append_dev(nav, div5);
+    			mount_component(link5, div5, null);
     			append_dev(nav, t5);
-    			mount_component(link6, nav, null);
+    			append_dev(nav, div6);
+    			mount_component(link6, div6, null);
     			append_dev(nav, t6);
-    			mount_component(link7, nav, null);
+    			append_dev(nav, div7);
+    			mount_component(link7, div7, null);
     			append_dev(nav, t7);
-    			mount_component(link8, nav, null);
+    			append_dev(nav, div8);
+    			mount_component(link8, div8, null);
     			append_dev(nav, t8);
-    			mount_component(link9, nav, null);
+    			append_dev(nav, div9);
+    			mount_component(link9, div9, null);
     			append_dev(nav, t9);
-    			mount_component(link10, nav, null);
+    			append_dev(nav, div10);
+    			mount_component(link10, div10, null);
     			append_dev(nav, t10);
-    			mount_component(link11, nav, null);
+    			append_dev(nav, div11);
+    			mount_component(link11, div11, null);
     			append_dev(nav, t11);
-    			mount_component(link12, nav, null);
+    			append_dev(nav, div12);
+    			mount_component(link12, div12, null);
     			append_dev(nav, t12);
-    			mount_component(link13, nav, null);
+    			append_dev(nav, div13);
+    			mount_component(link13, div13, null);
     			current = true;
     		},
 
@@ -2938,12 +3110,12 @@ var app = (function (exports) {
     			destroy_component(link13);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$1.name, type: "slot", source: "(15:0) <Router url=\"{url}\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$1.name, type: "slot", source: "(217:0) <Router url=\"{url}\">", ctx });
     	return block;
     }
 
     function create_fragment$4(ctx) {
-    	var current;
+    	var div, t, current;
 
     	var router = new Router({
     		props: {
@@ -2956,7 +3128,11 @@ var app = (function (exports) {
 
     	const block = {
     		c: function create() {
+    			div = element("div");
+    			t = space();
     			router.$$.fragment.c();
+    			attr_dev(div, "class", "wrapper");
+    			add_location(div, file$2, 215, 0, 3685);
     		},
 
     		l: function claim(nodes) {
@@ -2964,6 +3140,8 @@ var app = (function (exports) {
     		},
 
     		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			insert_dev(target, t, anchor);
     			mount_component(router, target, anchor);
     			current = true;
     		},
@@ -2988,6 +3166,11 @@ var app = (function (exports) {
     		},
 
     		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    				detach_dev(t);
+    			}
+
     			destroy_component(router, detaching);
     		}
     	};
@@ -2996,78 +3179,60 @@ var app = (function (exports) {
     }
 
     function instance$4($$self, $$props, $$invalidate) {
-    	let { name, url = "" } = $$props;
+    	let { url = "" } = $$props;
 
-    	const writable_props = ['name', 'url'];
+    	const writable_props = ['url'];
     	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Home> was created with unknown prop '${key}'`);
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Nav> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$set = $$props => {
-    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
     		if ('url' in $$props) $$invalidate('url', url = $$props.url);
     	};
 
     	$$self.$capture_state = () => {
-    		return { name, url };
+    		return { url };
     	};
 
     	$$self.$inject_state = $$props => {
-    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
     		if ('url' in $$props) $$invalidate('url', url = $$props.url);
     	};
 
-    	return { name, url };
+    	return { url };
     }
 
-    class Home extends SvelteComponentDev {
+    class Nav extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, ["name", "url"]);
-    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Home", options, id: create_fragment$4.name });
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.name === undefined && !('name' in props)) {
-    			console.warn("<Home> was created without expected prop 'name'");
-    		}
-    	}
-
-    	get name() {
-    		throw new Error("<Home>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set name(value) {
-    		throw new Error("<Home>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, ["url"]);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Nav", options, id: create_fragment$4.name });
     	}
 
     	get url() {
-    		throw new Error("<Home>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error("<Nav>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set url(value) {
-    		throw new Error("<Home>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error("<Nav>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
-    /* src/pages/Gokomyo.svelte generated by Svelte v3.12.1 */
+    /* src/pages/Home.svelte generated by Svelte v3.12.1 */
 
-    const file$3 = "src/pages/Gokomyo.svelte";
+    const file$3 = "src/pages/Home.svelte";
 
     function create_fragment$5(ctx) {
-    	var h1, t_1, p;
+    	var h1, t_1, current;
+
+    	var nav = new Nav({ $$inline: true });
 
     	const block = {
     		c: function create() {
     			h1 = element("h1");
-    			h1.textContent = "Emperor Go-Kōmyō";
+    			h1.textContent = "Cultural insights in the Edo period of Japan!";
     			t_1 = space();
-    			p = element("p");
-    			p.textContent = "Tsuguhito";
-    			attr_dev(h1, "class", "svelte-1tndowq");
-    			add_location(h1, file$3, 16, 0, 221);
-    			attr_dev(p, "class", "svelte-1tndowq");
-    			add_location(p, file$3, 17, 0, 247);
+    			nav.$$.fragment.c();
+    			add_location(h1, file$3, 4, 1, 65);
     		},
 
     		l: function claim(nodes) {
@@ -3077,73 +3242,647 @@ var app = (function (exports) {
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
     			insert_dev(target, t_1, anchor);
-    			insert_dev(target, p, anchor);
+    			mount_component(nav, target, anchor);
+    			current = true;
     		},
 
     		p: noop,
-    		i: noop,
-    		o: noop,
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(nav.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(nav.$$.fragment, local);
+    			current = false;
+    		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach_dev(h1);
     				detach_dev(t_1);
-    				detach_dev(p);
     			}
+
+    			destroy_component(nav, detaching);
     		}
     	};
     	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$5.name, type: "component", source: "", ctx });
     	return block;
     }
 
-    function instance$5($$self, $$props, $$invalidate) {
-    	let { name } = $$props;
+    class Home extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$5, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Home", options, id: create_fragment$5.name });
+    	}
+    }
 
-    	const writable_props = ['name'];
+    function results() {
+    		
+    	const url ='https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-33/sparql';
+    	
+    	const query = `
+	PREFIX dc: <http://purl.org/dc/elements/1.1/>
+	PREFIX dct: <http://purl.org/dc/terms/>
+	PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+	PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	
+	SELECT ?cho (SAMPLE(?title) AS ?uniqueTitle) (SAMPLE(?img) AS ?uniqueImg) (SAMPLE(?periode) AS ?Unique_Periode) (SAMPLE(?herkomstLabel) AS ?Unique_HerkomstLabel) (SAMPLE(?jaartal) AS ?Unique_Jaartal) WHERE {
+	   <https://hdl.handle.net/20.500.11840/termmaster4400> skos:narrower* ?concept .
+	   ?concept skos:prefLabel ?periode .
+	   VALUES ?periode { "Edo (Japanse periode)" }
+	  
+	   ?cho dc:title ?title .
+	   ?cho edm:isShownBy ?img .
+	  
+	   ?cho dct:created ?jaartal .
+	   filter(xsd:integer(?jaartal) >= 1611 && xsd:integer(?jaartal) <= 1868)
+	  
+	   ?cho dct:spatial ?herkomst .
+	   ?herkomst skos:prefLabel ?herkomstLabel .
+	   VALUES ?herkomstLabel { "Japan" } .
+	  
+	   FILTER langMatches(lang(?title), "ned")
+	} GROUP BY ?cho LIMIT 1
+	`;
+
+    	function runQuery(url, query){
+    		return fetch(url+'?query='+ encodeURIComponent(query) +'&format=json')
+    			.then(res => res.json()) //array van objecten, hier moet overheen gelooped worden voor html, in een loop img create element die je append met een src van een van de objecten met de link 
+    			.then(json => {
+    				console.log(json);
+    				console.table(json.results);
+    				return json.results.bindings;
+    			});
+    	} //de JSON sla je op een een var bijvoorbeeld, dan loop je hierovereen (for each budda in buddas)
+
+    	return runQuery(url, query);
+    }
+
+    /* src/components/showdata.svelte generated by Svelte v3.12.1 */
+
+    const file$4 = "src/components/showdata.svelte";
+
+    function create_fragment$6(ctx) {
+    	var div, p, t0_value = ctx.Showdata.uniqueTitle.value + "", t0, t1, img, img_src_value, img_alt_value;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			p = element("p");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			img = element("img");
+    			attr_dev(p, "class", "svelte-1cteoi3");
+    			add_location(p, file$4, 20, 4, 211);
+    			attr_dev(img, "src", img_src_value = ctx.Showdata.uniqueImg.value);
+    			attr_dev(img, "alt", img_alt_value = ctx.Showdata.uniqueTitle.value);
+    			attr_dev(img, "class", "svelte-1cteoi3");
+    			add_location(img, file$4, 21, 4, 253);
+    			attr_dev(div, "class", "wrapper svelte-1cteoi3");
+    			add_location(div, file$4, 19, 0, 185);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, p);
+    			append_dev(p, t0);
+    			append_dev(div, t1);
+    			append_dev(div, img);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.Showdata) && t0_value !== (t0_value = ctx.Showdata.uniqueTitle.value + "")) {
+    				set_data_dev(t0, t0_value);
+    			}
+
+    			if ((changed.Showdata) && img_src_value !== (img_src_value = ctx.Showdata.uniqueImg.value)) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if ((changed.Showdata) && img_alt_value !== (img_alt_value = ctx.Showdata.uniqueTitle.value)) {
+    				attr_dev(img, "alt", img_alt_value);
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$6.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$5($$self, $$props, $$invalidate) {
+    	let { Showdata } = $$props;
+
+    	const writable_props = ['Showdata'];
     	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Gokomyo> was created with unknown prop '${key}'`);
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Showdata> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$set = $$props => {
-    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
+    		if ('Showdata' in $$props) $$invalidate('Showdata', Showdata = $$props.Showdata);
     	};
 
     	$$self.$capture_state = () => {
-    		return { name };
+    		return { Showdata };
     	};
 
     	$$self.$inject_state = $$props => {
-    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
+    		if ('Showdata' in $$props) $$invalidate('Showdata', Showdata = $$props.Showdata);
     	};
 
-    	return { name };
+    	return { Showdata };
+    }
+
+    class Showdata_1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$5, create_fragment$6, safe_not_equal, ["Showdata"]);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Showdata_1", options, id: create_fragment$6.name });
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.Showdata === undefined && !('Showdata' in props)) {
+    			console.warn("<Showdata> was created without expected prop 'Showdata'");
+    		}
+    	}
+
+    	get Showdata() {
+    		throw new Error("<Showdata>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set Showdata(value) {
+    		throw new Error("<Showdata>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/components/extradata.svelte generated by Svelte v3.12.1 */
+
+    const file$5 = "src/components/extradata.svelte";
+
+    function create_fragment$7(ctx) {
+    	var div1, div0, h10, t0, t1, h11, t2, t3, p0, t4, t5, img, t6, p1, t7;
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			div0 = element("div");
+    			h10 = element("h1");
+    			t0 = text(ctx.title);
+    			t1 = space();
+    			h11 = element("h1");
+    			t2 = text(ctx.years);
+    			t3 = space();
+    			p0 = element("p");
+    			t4 = text(ctx.name);
+    			t5 = space();
+    			img = element("img");
+    			t6 = space();
+    			p1 = element("p");
+    			t7 = text(ctx.description);
+    			attr_dev(h10, "class", "svelte-p4g6op");
+    			add_location(h10, file$5, 46, 8, 579);
+    			attr_dev(h11, "class", "svelte-p4g6op");
+    			add_location(h11, file$5, 47, 8, 604);
+    			attr_dev(div0, "class", "innerwrapper svelte-p4g6op");
+    			add_location(div0, file$5, 45, 4, 543);
+    			attr_dev(p0, "class", "svelte-p4g6op");
+    			add_location(p0, file$5, 49, 4, 636);
+    			attr_dev(img, "src", ctx.image);
+    			attr_dev(img, "alt", ctx.title);
+    			attr_dev(img, "class", "svelte-p4g6op");
+    			add_location(img, file$5, 50, 4, 654);
+    			attr_dev(p1, "class", "svelte-p4g6op");
+    			add_location(p1, file$5, 51, 4, 694);
+    			attr_dev(div1, "class", "wrapper svelte-p4g6op");
+    			add_location(div1, file$5, 44, 0, 517);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, h10);
+    			append_dev(h10, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, h11);
+    			append_dev(h11, t2);
+    			append_dev(div1, t3);
+    			append_dev(div1, p0);
+    			append_dev(p0, t4);
+    			append_dev(div1, t5);
+    			append_dev(div1, img);
+    			append_dev(div1, t6);
+    			append_dev(div1, p1);
+    			append_dev(p1, t7);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.title) {
+    				set_data_dev(t0, ctx.title);
+    			}
+
+    			if (changed.years) {
+    				set_data_dev(t2, ctx.years);
+    			}
+
+    			if (changed.name) {
+    				set_data_dev(t4, ctx.name);
+    			}
+
+    			if (changed.image) {
+    				attr_dev(img, "src", ctx.image);
+    			}
+
+    			if (changed.title) {
+    				attr_dev(img, "alt", ctx.title);
+    			}
+
+    			if (changed.description) {
+    				set_data_dev(t7, ctx.description);
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div1);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$7.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$6($$self, $$props, $$invalidate) {
+    	let { title, name, years, description, image } = $$props;
+
+    	const writable_props = ['title', 'name', 'years', 'description', 'image'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Extradata> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('title' in $$props) $$invalidate('title', title = $$props.title);
+    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
+    		if ('years' in $$props) $$invalidate('years', years = $$props.years);
+    		if ('description' in $$props) $$invalidate('description', description = $$props.description);
+    		if ('image' in $$props) $$invalidate('image', image = $$props.image);
+    	};
+
+    	$$self.$capture_state = () => {
+    		return { title, name, years, description, image };
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('title' in $$props) $$invalidate('title', title = $$props.title);
+    		if ('name' in $$props) $$invalidate('name', name = $$props.name);
+    		if ('years' in $$props) $$invalidate('years', years = $$props.years);
+    		if ('description' in $$props) $$invalidate('description', description = $$props.description);
+    		if ('image' in $$props) $$invalidate('image', image = $$props.image);
+    	};
+
+    	return { title, name, years, description, image };
+    }
+
+    class Extradata extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$6, create_fragment$7, safe_not_equal, ["title", "name", "years", "description", "image"]);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Extradata", options, id: create_fragment$7.name });
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.title === undefined && !('title' in props)) {
+    			console.warn("<Extradata> was created without expected prop 'title'");
+    		}
+    		if (ctx.name === undefined && !('name' in props)) {
+    			console.warn("<Extradata> was created without expected prop 'name'");
+    		}
+    		if (ctx.years === undefined && !('years' in props)) {
+    			console.warn("<Extradata> was created without expected prop 'years'");
+    		}
+    		if (ctx.description === undefined && !('description' in props)) {
+    			console.warn("<Extradata> was created without expected prop 'description'");
+    		}
+    		if (ctx.image === undefined && !('image' in props)) {
+    			console.warn("<Extradata> was created without expected prop 'image'");
+    		}
+    	}
+
+    	get title() {
+    		throw new Error("<Extradata>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set title(value) {
+    		throw new Error("<Extradata>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get name() {
+    		throw new Error("<Extradata>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set name(value) {
+    		throw new Error("<Extradata>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get years() {
+    		throw new Error("<Extradata>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set years(value) {
+    		throw new Error("<Extradata>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get description() {
+    		throw new Error("<Extradata>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set description(value) {
+    		throw new Error("<Extradata>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get image() {
+    		throw new Error("<Extradata>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set image(value) {
+    		throw new Error("<Extradata>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/pages/Gokomyo.svelte generated by Svelte v3.12.1 */
+
+    const file$6 = "src/pages/Gokomyo.svelte";
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (48:8) {:else}
+    function create_else_block$1(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$1.name, type: "else", source: "(48:8) {:else}", ctx });
+    	return block;
+    }
+
+    // (45:4) {#each data as Showdata}
+    function create_each_block(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.data) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(45:4) {#each data as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$8(ctx) {
+    	var t, ul, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Go-Kōmyō",
+    		years: "1643–1654",
+    		name: "Tsuguhito",
+    		image: "images/Emperor_Go-Kōmyō.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.data;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$1(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			add_location(ul, file$6, 43, 0, 1544);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, ul, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(ul, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.data) {
+    				each_value = ctx.data;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$1(ctx);
+    				each_1_else.c();
+    				each_1_else.m(ul, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(ul);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$8.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$7($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+
+        onMount( async () => {
+            $$invalidate('data', data = await results());
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) $$invalidate('data', data = $$props.data);
+    	};
+
+    	return { data };
     }
 
     class Gokomyo extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, ["name"]);
-    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Gokomyo", options, id: create_fragment$5.name });
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.name === undefined && !('name' in props)) {
-    			console.warn("<Gokomyo> was created without expected prop 'name'");
-    		}
-    	}
-
-    	get name() {
-    		throw new Error("<Gokomyo>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set name(value) {
-    		throw new Error("<Gokomyo>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		init(this, options, instance$7, create_fragment$8, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Gokomyo", options, id: create_fragment$8.name });
     	}
     }
 
     /* src/pages/Gomizunoo.svelte generated by Svelte v3.12.1 */
 
-    function create_fragment$6(ctx) {
+    function create_fragment$9(ctx) {
     	const block = {
     		c: noop,
 
@@ -3157,22 +3896,22 @@ var app = (function (exports) {
     		o: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$6.name, type: "component", source: "", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$9.name, type: "component", source: "", ctx });
     	return block;
     }
 
     class Gomizunoo extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, null, create_fragment$6, safe_not_equal, []);
-    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Gomizunoo", options, id: create_fragment$6.name });
+    		init(this, options, null, create_fragment$9, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Gomizunoo", options, id: create_fragment$9.name });
     	}
     }
 
     const app = new App({
     	target: document.body,
     	props: {
-    		name: 'world'
+    		title: 'Cultural insights in the Edo period of Japan'
     	}
     });
 
@@ -3181,14 +3920,13 @@ var app = (function (exports) {
     exports.Gomomozono = Gomizunoo;
     exports.Gosai = Gomizunoo;
     exports.Gosakuramachi = Gomizunoo;
-    exports.Goyozei = Gomizunoo;
     exports.Higashiyama = Gomizunoo;
     exports.Home = Home;
     exports.Kokaku = Gomizunoo;
     exports.Komei = Gomizunoo;
     exports.Meisho = Gomizunoo;
     exports.Momozono = Gomizunoo;
-    exports.Niko = Gomizunoo;
+    exports.Ninko = Gomizunoo;
     exports.Reigen = Gomizunoo;
     exports.Sakuramachi = Gomizunoo;
     exports.default = app;
