@@ -54,8 +54,10 @@ This API allows you to get data of different historical events. This can be obje
 
 I made use of the following API:
 
-<details>
 * [GVN](https://data.netwerkdigitaalerfgoed.nl/)
+
+<details>
+
 
 ```
 	PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -84,6 +86,9 @@ I made use of the following API:
 ```
 </details>
 
+In this query I am asking for different kinds of data. The most important data that I need from this database is the **year period(jaartal)** between 1611 - 1868. In this period I need every **Title** and **Image**. I am also filtering on the origin and period, so I want every object that is in this database that has the origin: 'Japan' and period: 'Edo (Japanse periode)'. 
+
+As main concept I wanted to give an explaination about different objects out of this database, but with lack of certain database fields by some objects. A lot of objects don't have any description or just missing some extra information. When the new database is updated and developed more this can always change. I made it so the users only can see the Title, Year and Image for now..
 
 
 ## Sources
@@ -95,10 +100,16 @@ I made use of the following API:
 
 ## Credits
 
-* [Help from Thijs Spijker](https://github.com/iSirThijs) - Explained a lot of difficult programming stuff and good guy to talk against when u have a problem.
+* [Help from Thijs Spijker](https://github.com/iSirThijs) - Explained a lot of difficult programming stuff and good guy to talk against when u have a problem or when ur stuck.
 * [Help from Kris Kuijpers](https://github.com/kriskuiper) — Tried to explain to me how fetch works and how I need to use the reduce function. Also lets you see things from another perspective.
 * [Help from Stefan Gerrits](https://github.com/StefanGerrits2) — Did alot of programming together and watched in each other code to fix certain things. Also did the deploying of our apps together.
 * [Help from Leroy van Biljouw](https://github.com/SqueezyDough) - He helpt me look on a different way to my project while I was thinking way to hard for what I needed to do. Also showed me how he did he's map structure and I got inspired
+
+## Upcoming features
+- [ ] A detail page with extra information about the object.
+- [ ] Sharing option for social media or liking option.
+- [ ] Search option on the homepage where you can search for a specific year period
+- [ ] Making it more dynamic so that a developer can load in a different query and it will still work.
 
 # License
 
