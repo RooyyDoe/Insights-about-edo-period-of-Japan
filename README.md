@@ -1,8 +1,8 @@
-# Culture insights in the Edo period of Japan
+# Cultural insights in the Edo period of Japan
 
-This visualization provides a clarification of Japanese articles in the Edo period. This imperial period takes place from 1600 to 1868 in Japan. The objects are displayed scattered on a timeline and arranged in the Early, Middle or Late Edo period. The various emperors who have ruled in this period will also be indicated on this timeline. In this way the users can clearly see from which government period the various objects come. The timeline can be used interactively because a time period can be clicked and the Japanese objects will come forward that belong to this period.
+This visualization provides a clarification of Japanese articles in the Edo period. This imperial period takes place from 1600 to 1868 in Japan. The objects are displayed scattered on a timeline and arranged in the Early, Middle or Late Edo period. The various emperors who have ruled in this period will also be indicated on this timeline. In this way the users can clearly see from which government period the various objects origin. The timeline can be used interactively by clicking on a time period. This will make the Japanese objects belonging to this period come forward. 
 
-The whole process that I made within this project will all be documented in the [wiki](https://github.com/RooyyDoe/frontend-applications/wiki) of my repository
+The whole process of creating this visualization will all be documented in the [wiki](https://github.com/RooyyDoe/frontend-applications/wiki) of my repository.
 
 ## Screenshots
 
@@ -21,13 +21,13 @@ The whole process that I made within this project will all be documented in the 
 
 ## Assignment
 
-In this front-end course I needed to create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
+In this front-end course I needed to create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or a system created by you. Reflect on the merits and costs of frameworks together.
 
 ## Upcoming features
-- [ ] A detail page with extra information about the object.
-- [ ] Sharing option for social media or liking option.
-- [ ] Search option on the homepage where you can search for a specific year period
-- [ ] Making it more dynamic so that a developer can load in a different query and it will still work.
+- [ ] A 'Details' page with extra information about the object.
+- [ ] A sharing option for social media or a liking option.
+- [ ] A search option on the homepage where you can search for a specific time period.
+- [ ] Making the application more dynamic so that a developer can load in a different query and it will still work.
 
 ## Installation
 
@@ -57,7 +57,7 @@ localhost:5000 // host is now available
 **Demo** is also live at: https://frontend-applications-svelte.netlify.com/
 
 ## API
-This API allows you to get data of different historical events. This can be objects or pictures that are comming out of the history of this world. We have all gotten an invidual endpoint to use this database and get certain data from this database. 
+This API allows you to get data of different historical events. This can be for example historic objects or pictures from all over the world. We all have obtained an individual endpoint to substract certain data from this database. 
 
 I made use of the following API:
 
@@ -93,10 +93,9 @@ I made use of the following API:
 ```
 </details>
 
-In this query I am asking for different kinds of data. The most important data that I need from this database is the **year period(jaartal)** between 1611 - 1868. In this period I need every **Title** and **Image**. I am also filtering on the origin and period, so I want every object that is in this database that has the origin: 'Japan' and period: 'Edo (Japanse periode)'. 
+In this query I am asking for different types of data. The most important data that I need from this database is the data from the time period 1611-1868, which is obtained with the filter **year period(jaartal)**. In this period I need every **Title** and **Image**. I am also filtering on the origin and period, so I want every object that is in this database that has the origin: 'Japan' and period: 'Edo (Japanse periode)'. 
 
-As main concept I wanted to give an explanation about different objects out of this database, but with lack of certain database fields by some objects. A lot of objects don't have any description or just missing some extra information. When the new database is updated and developed more this can always change. I made it so the users only can see the Title, Year and Image for now..
-
+At first I wanted to give a detailed explanation of all the different objects that resulted from this query. However, due to the lack of information for certain objects, this was not possible. A lot of the objects did not have any description or some information was simply missing. When the database is further developed, more details can always be added to the visualization. For now the visualization will only include the title, the year and the image of the objects. 
 
 ## Sources
 * [Svelte Documentation](https://svelte.dev/tutorial/basics) - Basic documentation of Svelte.
@@ -107,10 +106,10 @@ As main concept I wanted to give an explanation about different objects out of t
 
 ## Credits
 
-* [Help from Thijs Spijker](https://github.com/iSirThijs) - Explained a lot of difficult programming stuff and good guy to talk against when u have a problem or when ur stuck.
-* [Help from Kris Kuijpers](https://github.com/kriskuiper) — Tried to explain to me how fetch works and how I need to use the reduce function. Also lets you see things from another perspective.
-* [Help from Stefan Gerrits](https://github.com/StefanGerrits2) — Did alot of programming together and watched in each other code to fix certain things. Also did the deploying of our apps together.
-* [Help from Leroy van Biljouw](https://github.com/SqueezyDough) - He helpt me look on a different way to my project while I was thinking way to hard for what I needed to do. Also showed me how he did he's map structure and I got inspired
+* [Help from Thijs Spijker](https://github.com/iSirThijs) - Explained a lot of difficult programming stuff and was a good guy to speak with when you have a problem or when you're stuck.
+* [Help from Kris Kuijpers](https://github.com/kriskuiper) — Tried to explain to me how fetch works and how I needed to use the reduce function. Also lets you see things from another perspective.
+* [Help from Stefan Gerrits](https://github.com/StefanGerrits2) — We did a lot of programming together and looked at each others code to fix certain things. We also did the deploying of our apps together.
+* [Help from Leroy van Biljouw](https://github.com/SqueezyDough) - He helped me look at my project in a different way when I was thinking way to difficult for what I needed to do. He also showed me how he did his map structure and I got inspired by that. 
 
 # License
 
