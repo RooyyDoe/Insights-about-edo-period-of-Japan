@@ -11,6 +11,7 @@ The whole process that I made within this project will all be documented in the 
 - [Culture insights in the Edo period of Japan](#culture-insights-in-the-edo-period-of-japan)
   - [Screenshots](#screenshots)
   - [Assignment](#assignment)
+  - [Upcoming features](#upcoming-features)
   - [Installation](#installation)
     - [Usage](#usage)
     - [API](#api)
@@ -21,6 +22,12 @@ The whole process that I made within this project will all be documented in the 
 ## Assignment
 
 In this front-end course I needed to create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
+
+## Upcoming features
+- [ ] A detail page with extra information about the object.
+- [ ] Sharing option for social media or liking option.
+- [ ] Search option on the homepage where you can search for a specific year period
+- [ ] Making it more dynamic so that a developer can load in a different query and it will still work.
 
 ## Installation
 
@@ -104,12 +111,6 @@ As main concept I wanted to give an explanation about different objects out of t
 * [Help from Kris Kuijpers](https://github.com/kriskuiper) — Tried to explain to me how fetch works and how I need to use the reduce function. Also lets you see things from another perspective.
 * [Help from Stefan Gerrits](https://github.com/StefanGerrits2) — Did alot of programming together and watched in each other code to fix certain things. Also did the deploying of our apps together.
 * [Help from Leroy van Biljouw](https://github.com/SqueezyDough) - He helpt me look on a different way to my project while I was thinking way to hard for what I needed to do. Also showed me how he did he's map structure and I got inspired
-
-## Upcoming features
-- [ ] A detail page with extra information about the object.
-- [ ] Sharing option for social media or liking option.
-- [ ] Search option on the homepage where you can search for a specific year period
-- [ ] Making it more dynamic so that a developer can load in a different query and it will still work.
 
 # License
 
