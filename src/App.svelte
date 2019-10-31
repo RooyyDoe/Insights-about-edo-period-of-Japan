@@ -11,7 +11,6 @@
 		background-size: contain;
 		font-family: fantasy;
 		position: relative!important;
-		overflow-y: hidden;
 	}
 
 	:global(h1) {

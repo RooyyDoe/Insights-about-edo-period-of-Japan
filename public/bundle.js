@@ -1866,7 +1866,7 @@ var app = (function (exports) {
 
     const file$1 = "src/App.svelte";
 
-    // (38:0) <Router url="{url}">
+    // (37:0) <Router url="{url}">
     function create_default_slot(ctx) {
     	var div, t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, current;
 
@@ -1988,7 +1988,7 @@ var app = (function (exports) {
     			route12.$$.fragment.c();
     			t12 = space();
     			route13.$$.fragment.c();
-    			add_location(div, file$1, 38, 2, 641);
+    			add_location(div, file$1, 37, 2, 619);
     		},
 
     		m: function mount(target, anchor) {
@@ -2110,7 +2110,7 @@ var app = (function (exports) {
     			destroy_component(route13);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(38:0) <Router url=\"{url}\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(37:0) <Router url=\"{url}\">", ctx });
     	return block;
     }
 
@@ -3292,7 +3292,7 @@ var app = (function (exports) {
 	PREFIX edm: <http://www.europeana.eu/schemas/edm/>
 	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	
-	SELECT ?cho (SAMPLE(?title) AS ?uniqueTitle) (SAMPLE(?img) AS ?uniqueImg) (SAMPLE(?periode) AS ?Unique_Periode) (SAMPLE(?herkomstLabel) AS ?Unique_HerkomstLabel) (SAMPLE(?jaartal) AS ?Unique_Jaartal) WHERE {
+	SELECT ?cho (SAMPLE(?title) AS ?uniqueTitle) (SAMPLE(?img) AS ?uniqueImage) (SAMPLE(?periode) AS ?uniquePeriod) (SAMPLE(?herkomstLabel) AS ?uniqueHerkomstLabel) (SAMPLE(?jaartal) AS ?uniqueJaartal) WHERE {
 	   <https://hdl.handle.net/20.500.11840/termmaster4400> skos:narrower* ?concept .
 	   ?concept skos:prefLabel ?periode .
 	   VALUES ?periode { "Edo (Japanse periode)" }
@@ -3308,15 +3308,15 @@ var app = (function (exports) {
 	   VALUES ?herkomstLabel { "Japan" } .
 	  
 	   FILTER langMatches(lang(?title), "ned")
-	} GROUP BY ?cho LIMIT 1
+	} GROUP BY ?cho LIMIT 10
 	`;
 
     	function runQuery(url, query){
     		return fetch(url+'?query='+ encodeURIComponent(query) +'&format=json')
     			.then(res => res.json()) //array van objecten, hier moet overheen gelooped worden voor html, in een loop img create element die je append met een src van een van de objecten met de link 
     			.then(json => {
-    				console.log(json);
-    				console.table(json.results);
+    				// console.log(json);
+    				// console.table(json.results);
     				return json.results.bindings;
     			});
     	} //de JSON sla je op een een var bijvoorbeeld, dan loop je hierovereen (for each budda in buddas)
@@ -3329,23 +3329,36 @@ var app = (function (exports) {
     const file$4 = "src/components/showdata.svelte";
 
     function create_fragment$6(ctx) {
-    	var div, p, t0_value = ctx.Showdata.uniqueTitle.value + "", t0, t1, img, img_src_value, img_alt_value;
+    	var a, span1, span0, h3, t0_value = ctx.Showdata.uniqueTitle.value + "", t0, t1, span2, t3, span3, t4, t5_value = ctx.Showdata.uniqueJaartal.value + "", t5;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			p = element("p");
+    			a = element("a");
+    			span1 = element("span");
+    			span0 = element("span");
+    			h3 = element("h3");
     			t0 = text(t0_value);
     			t1 = space();
-    			img = element("img");
-    			attr_dev(p, "class", "svelte-1cteoi3");
-    			add_location(p, file$4, 20, 4, 211);
-    			attr_dev(img, "src", img_src_value = ctx.Showdata.uniqueImg.value);
-    			attr_dev(img, "alt", img_alt_value = ctx.Showdata.uniqueTitle.value);
-    			attr_dev(img, "class", "svelte-1cteoi3");
-    			add_location(img, file$4, 21, 4, 253);
-    			attr_dev(div, "class", "wrapper svelte-1cteoi3");
-    			add_location(div, file$4, 19, 0, 185);
+    			span2 = element("span");
+    			span2.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.";
+    			t3 = space();
+    			span3 = element("span");
+    			t4 = text("Founded at: ");
+    			t5 = text(t5_value);
+    			attr_dev(h3, "class", "svelte-s8yzik");
+    			add_location(h3, file$4, 130, 4, 2955);
+    			attr_dev(span0, "class", "card-title svelte-s8yzik");
+    			add_location(span0, file$4, 129, 2, 2925);
+    			attr_dev(span1, "class", "card-header svelte-s8yzik");
+    			set_style(span1, "background-image", "url(" + ctx.Showdata.uniqueImage.value + ")");
+    			add_location(span1, file$4, 128, 2, 2835);
+    			attr_dev(span2, "class", "card-summary svelte-s8yzik");
+    			add_location(span2, file$4, 133, 2, 3015);
+    			attr_dev(span3, "class", "card-meta svelte-s8yzik");
+    			add_location(span3, file$4, 136, 2, 3176);
+    			attr_dev(a, "class", "card svelte-s8yzik");
+    			attr_dev(a, "href", "/");
+    			add_location(a, file$4, 127, 0, 2807);
     		},
 
     		l: function claim(nodes) {
@@ -3353,11 +3366,17 @@ var app = (function (exports) {
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, p);
-    			append_dev(p, t0);
-    			append_dev(div, t1);
-    			append_dev(div, img);
+    			insert_dev(target, a, anchor);
+    			append_dev(a, span1);
+    			append_dev(span1, span0);
+    			append_dev(span0, h3);
+    			append_dev(h3, t0);
+    			append_dev(a, t1);
+    			append_dev(a, span2);
+    			append_dev(a, t3);
+    			append_dev(a, span3);
+    			append_dev(span3, t4);
+    			append_dev(span3, t5);
     		},
 
     		p: function update(changed, ctx) {
@@ -3365,12 +3384,12 @@ var app = (function (exports) {
     				set_data_dev(t0, t0_value);
     			}
 
-    			if ((changed.Showdata) && img_src_value !== (img_src_value = ctx.Showdata.uniqueImg.value)) {
-    				attr_dev(img, "src", img_src_value);
+    			if (changed.Showdata) {
+    				set_style(span1, "background-image", "url(" + ctx.Showdata.uniqueImage.value + ")");
     			}
 
-    			if ((changed.Showdata) && img_alt_value !== (img_alt_value = ctx.Showdata.uniqueTitle.value)) {
-    				attr_dev(img, "alt", img_alt_value);
+    			if ((changed.Showdata) && t5_value !== (t5_value = ctx.Showdata.uniqueJaartal.value + "")) {
+    				set_data_dev(t5, t5_value);
     			}
     		},
 
@@ -3379,7 +3398,7 @@ var app = (function (exports) {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(div);
+    				detach_dev(a);
     			}
     		}
     	};
@@ -3642,7 +3661,7 @@ var app = (function (exports) {
     	return child_ctx;
     }
 
-    // (48:8) {:else}
+    // (78:12) {:else}
     function create_else_block$1(ctx) {
     	var t;
 
@@ -3661,11 +3680,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$1.name, type: "else", source: "(48:8) {:else}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$1.name, type: "else", source: "(78:12) {:else}", ctx });
     	return block;
     }
 
-    // (45:4) {#each data as Showdata}
+    // (75:8) {#each data as Showdata}
     function create_each_block(ctx) {
     	var current;
 
@@ -3706,12 +3725,12 @@ var app = (function (exports) {
     			destroy_component(showdata, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(45:4) {#each data as Showdata}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(75:8) {#each data as Showdata}", ctx });
     	return block;
     }
 
     function create_fragment$8(ctx) {
-    	var t, ul, current;
+    	var t, div1, div0, current;
 
     	var extradata = new Extradata({
     		props: {
@@ -3747,12 +3766,16 @@ var app = (function (exports) {
     		c: function create() {
     			extradata.$$.fragment.c();
     			t = space();
-    			ul = element("ul");
+    			div1 = element("div");
+    			div0 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			add_location(ul, file$6, 43, 0, 1544);
+    			attr_dev(div0, "class", "cards svelte-ta2yal");
+    			add_location(div0, file$6, 73, 4, 2167);
+    			attr_dev(div1, "class", "container svelte-ta2yal");
+    			add_location(div1, file$6, 72, 0, 2139);
     		},
 
     		l: function claim(nodes) {
@@ -3762,14 +3785,15 @@ var app = (function (exports) {
     		m: function mount(target, anchor) {
     			mount_component(extradata, target, anchor);
     			insert_dev(target, t, anchor);
-    			insert_dev(target, ul, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(ul, null);
+    				each_blocks[i].m(div0, null);
     			}
 
     			if (each_1_else) {
-    				each_1_else.m(ul, null);
+    				each_1_else.m(div0, null);
     			}
 
     			current = true;
@@ -3790,7 +3814,7 @@ var app = (function (exports) {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(ul, null);
+    						each_blocks[i].m(div0, null);
     					}
     				}
 
@@ -3809,7 +3833,7 @@ var app = (function (exports) {
     			} else if (!each_1_else) {
     				each_1_else = create_else_block$1(ctx);
     				each_1_else.c();
-    				each_1_else.m(ul, null);
+    				each_1_else.m(div0, null);
     			}
     		},
 
@@ -3840,7 +3864,7 @@ var app = (function (exports) {
 
     			if (detaching) {
     				detach_dev(t);
-    				detach_dev(ul);
+    				detach_dev(div1);
     			}
 
     			destroy_each(each_blocks, detaching);
@@ -3856,10 +3880,18 @@ var app = (function (exports) {
     	
 
         let data = [];
+        let jaartal = [];
 
         onMount( async () => {
+
             $$invalidate('data', data = await results());
+
+            for (let i=0; i< data.length; i++) { 
+                jaartal.push(data[i].uniqueJaartal.value);
+            } 
         });
+
+        console.log("test", jaartal);
 
     	$$self.$capture_state = () => {
     		return {};
@@ -3867,6 +3899,7 @@ var app = (function (exports) {
 
     	$$self.$inject_state = $$props => {
     		if ('data' in $$props) $$invalidate('data', data = $$props.data);
+    		if ('jaartal' in $$props) jaartal = $$props.jaartal;
     	};
 
     	return { data };

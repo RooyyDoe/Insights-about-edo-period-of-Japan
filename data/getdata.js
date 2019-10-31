@@ -9,7 +9,7 @@ export default function() {
 	PREFIX edm: <http://www.europeana.eu/schemas/edm/>
 	PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	
-	SELECT ?cho (SAMPLE(?title) AS ?uniqueTitle) (SAMPLE(?img) AS ?uniqueImg) (SAMPLE(?periode) AS ?Unique_Periode) (SAMPLE(?herkomstLabel) AS ?Unique_HerkomstLabel) (SAMPLE(?jaartal) AS ?Unique_Jaartal) WHERE {
+	SELECT ?cho (SAMPLE(?title) AS ?uniqueTitle) (SAMPLE(?img) AS ?uniqueImage) (SAMPLE(?periode) AS ?uniquePeriod) (SAMPLE(?herkomstLabel) AS ?uniqueHerkomstLabel) (SAMPLE(?jaartal) AS ?uniqueJaartal) WHERE {
 	   <https://hdl.handle.net/20.500.11840/termmaster4400> skos:narrower* ?concept .
 	   ?concept skos:prefLabel ?periode .
 	   VALUES ?periode { "Edo (Japanse periode)" }
@@ -25,15 +25,15 @@ export default function() {
 	   VALUES ?herkomstLabel { "Japan" } .
 	  
 	   FILTER langMatches(lang(?title), "ned")
-	} GROUP BY ?cho LIMIT 1
+	} GROUP BY ?cho LIMIT 10
 	`;
 
 	function runQuery(url, query){
 		return fetch(url+'?query='+ encodeURIComponent(query) +'&format=json')
 			.then(res => res.json()) //array van objecten, hier moet overheen gelooped worden voor html, in een loop img create element die je append met een src van een van de objecten met de link 
 			.then(json => {
-				console.log(json);
-				console.table(json.results);
+				// console.log(json);
+				// console.table(json.results);
 				return json.results.bindings;
 			});
 	} //de JSON sla je op een een var bijvoorbeeld, dan loop je hierovereen (for each budda in buddas)

@@ -5,10 +5,21 @@
     import Extradata from '../components/extradata.svelte';
 
     let data = [];
+    let jaartal = [];
 
     onMount( async () => {
-        data = await results()
+
+        data = await results();
+
+        for (let i=0; i< data.length; i++) { 
+            jaartal.push(data[i].uniqueJaartal.value)
+        } 
     })
+    Number(jaartal)
+
+    console.log("test", jaartal);
+
+
 </script>
 
 <style>
@@ -19,6 +30,24 @@
     p {
         color: gray;
         text-align: center;
+    }
+
+    .container {
+	    max-width: 1100px;
+	    margin: 0 auto;
+    }
+
+    .cards {
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        padding: 1.5%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
 </style>
 
@@ -41,12 +70,14 @@
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
 
-<ul>
-    {#each data as Showdata}
-            <Showdata {Showdata}/>
+<div class="container">
+    <div class="cards">
+        {#each data as Showdata}
+                <Showdata {Showdata}/>
 
-        {:else}
+            {:else}
 
-        Loading...
-    {/each}
-</ul>
+            Loading...
+        {/each}
+    </div>
+</div>
