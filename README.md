@@ -1,8 +1,8 @@
 # Cultural insights in the Edo period of Japan
 
-This visualization provides a clarification of Japanese articles in the Edo period. This imperial period takes place from 1600 to 1868 in Japan. The objects are displayed scattered on a timeline and arranged in the Early, Middle or Late Edo period. The various emperors who have ruled in this period will also be indicated on this timeline. In this way the users can clearly see from which government period the various objects origin. The timeline can be used interactively by clicking on a time period. This will make the Japanese objects belonging to this period come forward. 
+This application provides a clarification of Japanese articles in the Edo period. This imperial period takes place from 1600 to 1868 in Japan. The objects are displayed scattered on a timeline and arranged in the Early, Middle or Late Edo period. The various emperors who have ruled in this period will also be indicated on this timeline. In this way the users can clearly see from which government period the various objects origin. The timeline can be used interactively by clicking on a time period. This will make the Japanese objects belonging to this period come forward. 
 
-The whole process of creating this visualization will all be documented in the [wiki](https://github.com/RooyyDoe/frontend-applications/wiki) of my repository.
+The whole process of creating this application will all be documented in the [wiki](https://github.com/RooyyDoe/frontend-applications/wiki) of my repository.
 
 ## Screenshots
 
@@ -95,7 +95,7 @@ I made use of the following API:
 
 In this query I am asking for different types of data. The most important data that I need from this database is the data from the time period 1611-1868, which is obtained with the filter **year period(jaartal)**. In this period I need every **Title** and **Image**. I am also filtering on the origin and period, so I want every object that is in this database that has the origin: 'Japan' and period: 'Edo (Japanse periode)'. 
 
-At first I wanted to give a detailed explanation of all the different objects that resulted from this query. However, due to the lack of information for certain objects, this was not possible. A lot of the objects did not have any description or some information was simply missing. When the database is further developed, more details can always be added to the visualization. For now the visualization will only include the title, the year and the image of the objects. 
+At first I wanted to give a detailed explanation of all the different objects that resulted from this query. However, due to the lack of information for certain objects, this was not possible. A lot of the objects did not have any description or some information was simply missing. When the database is further developed, more details can always be added to the visualization. For now the application will only include the title, the year and the image of the objects. 
 
 ## Sources
 * [Svelte Documentation](https://svelte.dev/tutorial/basics) - Basic documentation of Svelte.
