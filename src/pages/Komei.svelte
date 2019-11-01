@@ -8,7 +8,7 @@
     let filteredData = [];
 
     onMount( async () => {
-
+        // Wacht op de data die doorkomt en dan stopt hij het in de lege array genaamd 'data'
         data = await results();
 
         const getDates = (dates) => {

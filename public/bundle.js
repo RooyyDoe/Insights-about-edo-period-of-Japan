@@ -6274,9 +6274,9 @@ var app = (function (exports) {
     				each_blocks[i].c();
     			}
     			attr_dev(div0, "class", "cards svelte-e1ainw");
-    			add_location(div0, file$e, 117, 4, 5265);
+    			add_location(div0, file$e, 117, 4, 5358);
     			attr_dev(div1, "class", "container svelte-e1ainw");
-    			add_location(div1, file$e, 116, 0, 5237);
+    			add_location(div1, file$e, 116, 0, 5330);
     		},
 
     		l: function claim(nodes) {
@@ -6384,7 +6384,7 @@ var app = (function (exports) {
         let filteredData = [];
 
         onMount( async () => {
-
+            // Wacht op de data die doorkomt en dan stopt hij het in de lege array genaamd 'data'
             data = await results();
 
             const getDates = (dates) => {
@@ -7186,9 +7186,9 @@ var app = (function (exports) {
     				each_blocks[i].c();
     			}
     			attr_dev(div0, "class", "cards svelte-e1ainw");
-    			add_location(div0, file$h, 99, 4, 2919);
+    			add_location(div0, file$h, 99, 4, 2927);
     			attr_dev(div1, "class", "container svelte-e1ainw");
-    			add_location(div1, file$h, 98, 0, 2891);
+    			add_location(div1, file$h, 98, 0, 2899);
     		},
 
     		l: function claim(nodes) {
@@ -7296,7 +7296,7 @@ var app = (function (exports) {
         let filteredData = [];
 
         onMount( async () => {
-
+            
             data = await results();
 
             const getDates = (dates) => {

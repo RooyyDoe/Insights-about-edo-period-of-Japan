@@ -8,7 +8,7 @@
     let filteredData = [];
 
     onMount( async () => {
-
+        
         data = await results();
 
         const getDates = (dates) => {
