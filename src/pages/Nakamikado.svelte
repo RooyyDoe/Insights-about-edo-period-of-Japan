@@ -25,7 +25,7 @@
         }
 
         // jaartallen die je wilt checken
-        const yearToCheck = getDates("1817 - 1846");
+        const yearToCheck = getDates("1709 - 1735");
 
         filteredData = data.filter(el => {
 
@@ -78,10 +78,10 @@
 </style>
 
 <Extradata 
-    title="Emperor Ninkō"
-    years="1817–1846"
-    name="Ayahito"
-    image="images/Emperor_Ninkō.jpg"
+    title="Emperor Nakamikado"
+    years="1709–1735"
+    name="Yasuhito/Yoshihito"
+    image="images/Emperor_Nakamikado.jpg"
     description="    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 

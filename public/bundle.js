@@ -1868,7 +1868,7 @@ var app = (function (exports) {
 
     // (37:0) <Router url="{url}">
     function create_default_slot(ctx) {
-    	var div, t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, current;
+    	var div, t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, current;
 
     	var route0 = new Route({
     		props: { path: "/", component: Home },
@@ -1891,20 +1891,20 @@ var app = (function (exports) {
     	var route3 = new Route({
     		props: {
     		path: "Gomomozono",
-    		component: Gomizunoo
+    		component: Gomomozono
     	},
     		$$inline: true
     	});
 
     	var route4 = new Route({
-    		props: { path: "Gosai", component: Gomizunoo },
+    		props: { path: "Gosai", component: Gosai },
     		$$inline: true
     	});
 
     	var route5 = new Route({
     		props: {
     		path: "Gosakuramachi",
-    		component: Gomizunoo
+    		component: Gosakuramachi
     	},
     		$$inline: true
     	});
@@ -1912,48 +1912,56 @@ var app = (function (exports) {
     	var route6 = new Route({
     		props: {
     		path: "Higashiyama",
-    		component: Gomizunoo
+    		component: Higashiyama
     	},
     		$$inline: true
     	});
 
     	var route7 = new Route({
-    		props: { path: "Kokaku", component: Gomizunoo },
-    		$$inline: true
-    	});
-
-    	var route8 = new Route({
-    		props: { path: "Komei", component: Gomizunoo },
-    		$$inline: true
-    	});
-
-    	var route9 = new Route({
-    		props: { path: "Meisho", component: Gomizunoo },
-    		$$inline: true
-    	});
-
-    	var route10 = new Route({
     		props: {
-    		path: "Momozono",
-    		component: Gomizunoo
+    		path: "Nakamikado",
+    		component: Nakamikado
     	},
     		$$inline: true
     	});
 
+    	var route8 = new Route({
+    		props: { path: "Kokaku", component: Kokaku },
+    		$$inline: true
+    	});
+
+    	var route9 = new Route({
+    		props: { path: "Komei", component: Komei },
+    		$$inline: true
+    	});
+
+    	var route10 = new Route({
+    		props: { path: "Meisho", component: Meisho },
+    		$$inline: true
+    	});
+
     	var route11 = new Route({
-    		props: { path: "Ninko", component: Gomizunoo },
+    		props: {
+    		path: "Momozono",
+    		component: Momozono
+    	},
     		$$inline: true
     	});
 
     	var route12 = new Route({
-    		props: { path: "Reigen", component: Gomizunoo },
+    		props: { path: "Ninko", component: Ninko },
     		$$inline: true
     	});
 
     	var route13 = new Route({
+    		props: { path: "Reigen", component: Reigen },
+    		$$inline: true
+    	});
+
+    	var route14 = new Route({
     		props: {
     		path: "Sakuramachi",
-    		component: Gomizunoo
+    		component: Sakuramachi
     	},
     		$$inline: true
     	});
@@ -1988,6 +1996,8 @@ var app = (function (exports) {
     			route12.$$.fragment.c();
     			t12 = space();
     			route13.$$.fragment.c();
+    			t13 = space();
+    			route14.$$.fragment.c();
     			add_location(div, file$1, 37, 2, 619);
     		},
 
@@ -2020,6 +2030,8 @@ var app = (function (exports) {
     			mount_component(route12, div, null);
     			append_dev(div, t12);
     			mount_component(route13, div, null);
+    			append_dev(div, t13);
+    			mount_component(route14, div, null);
     			current = true;
     		},
 
@@ -2055,6 +2067,8 @@ var app = (function (exports) {
 
     			transition_in(route13.$$.fragment, local);
 
+    			transition_in(route14.$$.fragment, local);
+
     			current = true;
     		},
 
@@ -2073,6 +2087,7 @@ var app = (function (exports) {
     			transition_out(route11.$$.fragment, local);
     			transition_out(route12.$$.fragment, local);
     			transition_out(route13.$$.fragment, local);
+    			transition_out(route14.$$.fragment, local);
     			current = false;
     		},
 
@@ -2108,6 +2123,8 @@ var app = (function (exports) {
     			destroy_component(route12);
 
     			destroy_component(route13);
+
+    			destroy_component(route14);
     		}
     	};
     	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(37:0) <Router url=\"{url}\">", ctx });
@@ -2211,7 +2228,7 @@ var app = (function (exports) {
 
     const file$2 = "src/components/nav.svelte";
 
-    // (220:8) <Link to="Gomizunoo">
+    // (215:8) <Link to="Gomizunoo">
     function create_default_slot_14(ctx) {
     	var p, t_1, img;
 
@@ -2221,12 +2238,12 @@ var app = (function (exports) {
     			p.textContent = "1611–1629 Go-Mizunoo";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 220, 12, 3821);
-    			attr_dev(img, "class", "bottom svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 215, 12, 3444);
+    			attr_dev(img, "class", "bottom svelte-anzma0");
     			attr_dev(img, "src", "images/Emperor_Go-Mizunoo.jpg");
     			attr_dev(img, "alt", "Go-Mizunoo");
-    			add_location(img, file$2, 221, 12, 3875);
+    			add_location(img, file$2, 216, 12, 3498);
     		},
 
     		m: function mount(target, anchor) {
@@ -2243,11 +2260,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_14.name, type: "slot", source: "(220:8) <Link to=\"Gomizunoo\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_14.name, type: "slot", source: "(215:8) <Link to=\"Gomizunoo\">", ctx });
     	return block;
     }
 
-    // (226:8) <Link to="Meisho">
+    // (221:8) <Link to="Meisho">
     function create_default_slot_13(ctx) {
     	var p, t_1, img;
 
@@ -2257,12 +2274,12 @@ var app = (function (exports) {
     			p.textContent = "1629–1643 Meishō";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 226, 12, 4050);
-    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 221, 12, 3673);
+    			attr_dev(img, "class", " svelte-anzma0");
     			attr_dev(img, "src", "images/Meisho_of_Japan.jpg");
     			attr_dev(img, "alt", "Meishō");
-    			add_location(img, file$2, 227, 12, 4100);
+    			add_location(img, file$2, 222, 12, 3723);
     		},
 
     		m: function mount(target, anchor) {
@@ -2279,11 +2296,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_13.name, type: "slot", source: "(226:8) <Link to=\"Meisho\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_13.name, type: "slot", source: "(221:8) <Link to=\"Meisho\">", ctx });
     	return block;
     }
 
-    // (232:8) <Link to="Gokomyo">
+    // (227:8) <Link to="Gokomyo">
     function create_default_slot_12(ctx) {
     	var p, t_1, img;
 
@@ -2293,12 +2310,12 @@ var app = (function (exports) {
     			p.textContent = "1643–1654 Go-Kōmyō";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 232, 12, 4264);
-    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 227, 12, 3887);
+    			attr_dev(img, "class", "top svelte-anzma0");
     			attr_dev(img, "src", "images/Emperor_Go-Kōmyō.jpg");
     			attr_dev(img, "alt", "Go-Kōmyō");
-    			add_location(img, file$2, 233, 12, 4316);
+    			add_location(img, file$2, 228, 12, 3939);
     		},
 
     		m: function mount(target, anchor) {
@@ -2315,11 +2332,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_12.name, type: "slot", source: "(232:8) <Link to=\"Gokomyo\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_12.name, type: "slot", source: "(227:8) <Link to=\"Gokomyo\">", ctx });
     	return block;
     }
 
-    // (238:8) <Link to="Gosai">
+    // (233:8) <Link to="Gosai">
     function create_default_slot_11(ctx) {
     	var p, t_1, img;
 
@@ -2329,12 +2346,12 @@ var app = (function (exports) {
     			p.textContent = "1655–1663 Go-Sai";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 238, 12, 4482);
-    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 233, 12, 4105);
+    			attr_dev(img, "class", " svelte-anzma0");
     			attr_dev(img, "src", "images/Emperor_Go-Sai.jpg");
     			attr_dev(img, "alt", "Go-Sai");
-    			add_location(img, file$2, 239, 12, 4532);
+    			add_location(img, file$2, 234, 12, 4155);
     		},
 
     		m: function mount(target, anchor) {
@@ -2351,11 +2368,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_11.name, type: "slot", source: "(238:8) <Link to=\"Gosai\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_11.name, type: "slot", source: "(233:8) <Link to=\"Gosai\">", ctx });
     	return block;
     }
 
-    // (244:8) <Link to="Reigen">
+    // (239:8) <Link to="Reigen">
     function create_default_slot_10(ctx) {
     	var p, t_1, img;
 
@@ -2365,12 +2382,12 @@ var app = (function (exports) {
     			p.textContent = "1663–1687 Reigen";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 244, 12, 4693);
-    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 239, 12, 4316);
+    			attr_dev(img, "class", " svelte-anzma0");
     			attr_dev(img, "src", "images/Emperor_Reigen.jpg");
     			attr_dev(img, "alt", "Reigen");
-    			add_location(img, file$2, 245, 12, 4743);
+    			add_location(img, file$2, 240, 12, 4366);
     		},
 
     		m: function mount(target, anchor) {
@@ -2387,11 +2404,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_10.name, type: "slot", source: "(244:8) <Link to=\"Reigen\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_10.name, type: "slot", source: "(239:8) <Link to=\"Reigen\">", ctx });
     	return block;
     }
 
-    // (250:8) <Link to="Higashiyama">
+    // (245:8) <Link to="Higashiyama">
     function create_default_slot_9(ctx) {
     	var p, t_1, img;
 
@@ -2401,12 +2418,12 @@ var app = (function (exports) {
     			p.textContent = "1687–1709 Higashiyama";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 250, 12, 4914);
-    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 245, 12, 4537);
+    			attr_dev(img, "class", "top svelte-anzma0");
     			attr_dev(img, "src", "images/800px-Emperor_Higashiyama.jpg");
     			attr_dev(img, "alt", "Higashiyama");
-    			add_location(img, file$2, 251, 12, 4969);
+    			add_location(img, file$2, 246, 12, 4592);
     		},
 
     		m: function mount(target, anchor) {
@@ -2423,11 +2440,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_9.name, type: "slot", source: "(250:8) <Link to=\"Higashiyama\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_9.name, type: "slot", source: "(245:8) <Link to=\"Higashiyama\">", ctx });
     	return block;
     }
 
-    // (256:8) <Link to="Nakamikado">
+    // (251:8) <Link to="Nakamikado">
     function create_default_slot_8(ctx) {
     	var p, t_1, img;
 
@@ -2437,12 +2454,12 @@ var app = (function (exports) {
     			p.textContent = "1709–1735 Nakamikado";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 256, 12, 5157);
-    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 251, 12, 4780);
+    			attr_dev(img, "class", "top svelte-anzma0");
     			attr_dev(img, "src", "images/Emperor_Nakamikado.jpg");
     			attr_dev(img, "alt", "Nakamikado");
-    			add_location(img, file$2, 257, 12, 5211);
+    			add_location(img, file$2, 252, 12, 4834);
     		},
 
     		m: function mount(target, anchor) {
@@ -2459,11 +2476,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_8.name, type: "slot", source: "(256:8) <Link to=\"Nakamikado\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_8.name, type: "slot", source: "(251:8) <Link to=\"Nakamikado\">", ctx });
     	return block;
     }
 
-    // (262:8) <Link to="Sakuramachi">
+    // (257:8) <Link to="Sakuramachi">
     function create_default_slot_7(ctx) {
     	var p, t_1, img;
 
@@ -2473,12 +2490,12 @@ var app = (function (exports) {
     			p.textContent = "1735–1747 Sakuramachi";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 262, 12, 5393);
-    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 257, 12, 5016);
+    			attr_dev(img, "class", " svelte-anzma0");
     			attr_dev(img, "src", "images/Emperor_Sakuramachi.jpg");
     			attr_dev(img, "alt", "Sakuramachi");
-    			add_location(img, file$2, 263, 12, 5448);
+    			add_location(img, file$2, 258, 12, 5071);
     		},
 
     		m: function mount(target, anchor) {
@@ -2495,11 +2512,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_7.name, type: "slot", source: "(262:8) <Link to=\"Sakuramachi\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_7.name, type: "slot", source: "(257:8) <Link to=\"Sakuramachi\">", ctx });
     	return block;
     }
 
-    // (268:8) <Link to="Momozono">
+    // (263:8) <Link to="Momozono">
     function create_default_slot_6(ctx) {
     	var p, t_1, img;
 
@@ -2509,12 +2526,12 @@ var app = (function (exports) {
     			p.textContent = "1747–1762 Momozono";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 268, 12, 5623);
-    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 263, 12, 5246);
+    			attr_dev(img, "class", "top svelte-anzma0");
     			attr_dev(img, "src", "images/1280px-Emperor_Momozono.jpg");
     			attr_dev(img, "alt", "Momozono");
-    			add_location(img, file$2, 269, 12, 5675);
+    			add_location(img, file$2, 264, 12, 5298);
     		},
 
     		m: function mount(target, anchor) {
@@ -2531,11 +2548,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_6.name, type: "slot", source: "(268:8) <Link to=\"Momozono\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_6.name, type: "slot", source: "(263:8) <Link to=\"Momozono\">", ctx });
     	return block;
     }
 
-    // (274:8) <Link to="Gosakuramachi">
+    // (269:8) <Link to="Gosakuramachi">
     function create_default_slot_5(ctx) {
     	var p, t_1, img;
 
@@ -2545,12 +2562,12 @@ var app = (function (exports) {
     			p.textContent = "1762–1771 Go-Sakuramachi";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 274, 12, 5864);
-    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 269, 12, 5487);
+    			attr_dev(img, "class", "top svelte-anzma0");
     			attr_dev(img, "src", "images/Empress_Go-Sakuramachi.jpg");
     			attr_dev(img, "alt", "Go-Sakuramachi");
-    			add_location(img, file$2, 275, 12, 5922);
+    			add_location(img, file$2, 270, 12, 5545);
     		},
 
     		m: function mount(target, anchor) {
@@ -2567,11 +2584,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_5.name, type: "slot", source: "(274:8) <Link to=\"Gosakuramachi\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_5.name, type: "slot", source: "(269:8) <Link to=\"Gosakuramachi\">", ctx });
     	return block;
     }
 
-    // (280:8) <Link to="Gomomozono">
+    // (275:8) <Link to="Gomomozono">
     function create_default_slot_4(ctx) {
     	var p, t_1, img;
 
@@ -2581,12 +2598,12 @@ var app = (function (exports) {
     			p.textContent = "1771–1779 Go-Momozono";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 280, 12, 6110);
-    			attr_dev(img, "class", " svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 275, 12, 5733);
+    			attr_dev(img, "class", " svelte-anzma0");
     			attr_dev(img, "src", "images/1024px-Emperor_Go-Momozono.jpg");
     			attr_dev(img, "alt", "Go-Momozono");
-    			add_location(img, file$2, 281, 12, 6165);
+    			add_location(img, file$2, 276, 12, 5788);
     		},
 
     		m: function mount(target, anchor) {
@@ -2603,11 +2620,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_4.name, type: "slot", source: "(280:8) <Link to=\"Gomomozono\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_4.name, type: "slot", source: "(275:8) <Link to=\"Gomomozono\">", ctx });
     	return block;
     }
 
-    // (286:8) <Link to="Kokaku">
+    // (281:8) <Link to="Kokaku">
     function create_default_slot_3(ctx) {
     	var p, t_1, img;
 
@@ -2617,12 +2634,12 @@ var app = (function (exports) {
     			p.textContent = "1780–1817 Kōkaku";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 286, 12, 6343);
-    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 281, 12, 5966);
+    			attr_dev(img, "class", "top svelte-anzma0");
     			attr_dev(img, "src", "images/Emperor_Kōkaku.jpg");
     			attr_dev(img, "alt", "Kōkaku");
-    			add_location(img, file$2, 287, 12, 6393);
+    			add_location(img, file$2, 282, 12, 6016);
     		},
 
     		m: function mount(target, anchor) {
@@ -2639,11 +2656,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_3.name, type: "slot", source: "(286:8) <Link to=\"Kokaku\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_3.name, type: "slot", source: "(281:8) <Link to=\"Kokaku\">", ctx });
     	return block;
     }
 
-    // (292:8) <Link to="Ninko">
+    // (287:8) <Link to="Ninko">
     function create_default_slot_2(ctx) {
     	var p, t_1, img;
 
@@ -2653,12 +2670,12 @@ var app = (function (exports) {
     			p.textContent = "1817–1846 Ninkō";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
-    			add_location(p, file$2, 292, 12, 6555);
-    			attr_dev(img, "class", "top svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
+    			add_location(p, file$2, 287, 12, 6178);
+    			attr_dev(img, "class", "top svelte-anzma0");
     			attr_dev(img, "src", "images/Emperor_Ninkō.jpg");
     			attr_dev(img, "alt", "Ninkō");
-    			add_location(img, file$2, 293, 12, 6604);
+    			add_location(img, file$2, 288, 12, 6227);
     		},
 
     		m: function mount(target, anchor) {
@@ -2675,11 +2692,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(292:8) <Link to=\"Ninko\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(287:8) <Link to=\"Ninko\">", ctx });
     	return block;
     }
 
-    // (298:8) <Link to="Komei">
+    // (293:8) <Link to="Komei">
     function create_default_slot_1(ctx) {
     	var p, t_1, img;
 
@@ -2689,13 +2706,13 @@ var app = (function (exports) {
     			p.textContent = "1846–1867 Kōmei";
     			t_1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "title svelte-1oiivp4");
+    			attr_dev(p, "class", "title svelte-anzma0");
     			set_style(p, "color", "white");
-    			add_location(p, file$2, 298, 12, 6764);
-    			attr_dev(img, "class", " svelte-1oiivp4");
+    			add_location(p, file$2, 293, 12, 6387);
+    			attr_dev(img, "class", " svelte-anzma0");
     			attr_dev(img, "src", "images/800px-The_Emperor_Komei.jpg");
     			attr_dev(img, "alt", "Kōmei");
-    			add_location(img, file$2, 299, 12, 6834);
+    			add_location(img, file$2, 294, 12, 6458);
     		},
 
     		m: function mount(target, anchor) {
@@ -2712,11 +2729,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(298:8) <Link to=\"Komei\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(293:8) <Link to=\"Komei\">", ctx });
     	return block;
     }
 
-    // (217:0) <Router url="{url}">
+    // (212:0) <Router url="{url}">
     function create_default_slot$1(ctx) {
     	var nav, div0, t0, div1, t1, div2, t2, div3, t3, div4, t4, div5, t5, div6, t6, div7, t7, div8, t8, div9, t9, div10, t10, div11, t11, div12, t12, div13, current;
 
@@ -2890,35 +2907,35 @@ var app = (function (exports) {
     			t12 = space();
     			div13 = element("div");
     			link13.$$.fragment.c();
-    			attr_dev(div0, "class", "animate gomizunoo svelte-1oiivp4");
-    			add_location(div0, file$2, 218, 4, 3747);
-    			attr_dev(div1, "class", "animate meisho svelte-1oiivp4");
-    			add_location(div1, file$2, 224, 4, 3982);
-    			attr_dev(div2, "class", "animate gokomyo svelte-1oiivp4");
-    			add_location(div2, file$2, 230, 4, 4194);
-    			attr_dev(div3, "class", "animate gosai svelte-1oiivp4");
-    			add_location(div3, file$2, 236, 4, 4416);
-    			attr_dev(div4, "class", "animate reigen svelte-1oiivp4");
-    			add_location(div4, file$2, 242, 4, 4625);
-    			attr_dev(div5, "class", "animate higashiyama svelte-1oiivp4");
-    			add_location(div5, file$2, 248, 4, 4836);
-    			attr_dev(div6, "class", "animate nakamikado svelte-1oiivp4");
-    			add_location(div6, file$2, 254, 4, 5081);
-    			attr_dev(div7, "class", "animate sakuramachi svelte-1oiivp4");
-    			add_location(div7, file$2, 260, 4, 5315);
-    			attr_dev(div8, "class", "animate momozono svelte-1oiivp4");
-    			add_location(div8, file$2, 266, 4, 5551);
-    			attr_dev(div9, "class", "animate gosakuramachi svelte-1oiivp4");
-    			add_location(div9, file$2, 272, 4, 5782);
-    			attr_dev(div10, "class", "animate gomomozono svelte-1oiivp4");
-    			add_location(div10, file$2, 278, 4, 6034);
-    			attr_dev(div11, "class", "animate kokaku svelte-1oiivp4");
-    			add_location(div11, file$2, 284, 4, 6275);
-    			attr_dev(div12, "class", "animate ninko svelte-1oiivp4");
-    			add_location(div12, file$2, 290, 4, 6489);
-    			attr_dev(div13, "class", "animate komei svelte-1oiivp4");
-    			add_location(div13, file$2, 296, 4, 6698);
-    			add_location(nav, file$2, 217, 2, 3736);
+    			attr_dev(div0, "class", "animate gomizunoo svelte-anzma0");
+    			add_location(div0, file$2, 213, 4, 3370);
+    			attr_dev(div1, "class", "animate meisho svelte-anzma0");
+    			add_location(div1, file$2, 219, 4, 3605);
+    			attr_dev(div2, "class", "animate gokomyo svelte-anzma0");
+    			add_location(div2, file$2, 225, 4, 3817);
+    			attr_dev(div3, "class", "animate gosai svelte-anzma0");
+    			add_location(div3, file$2, 231, 4, 4039);
+    			attr_dev(div4, "class", "animate reigen svelte-anzma0");
+    			add_location(div4, file$2, 237, 4, 4248);
+    			attr_dev(div5, "class", "animate higashiyama svelte-anzma0");
+    			add_location(div5, file$2, 243, 4, 4459);
+    			attr_dev(div6, "class", "animate nakamikado svelte-anzma0");
+    			add_location(div6, file$2, 249, 4, 4704);
+    			attr_dev(div7, "class", "animate sakuramachi svelte-anzma0");
+    			add_location(div7, file$2, 255, 4, 4938);
+    			attr_dev(div8, "class", "animate momozono svelte-anzma0");
+    			add_location(div8, file$2, 261, 4, 5174);
+    			attr_dev(div9, "class", "animate gosakuramachi svelte-anzma0");
+    			add_location(div9, file$2, 267, 4, 5405);
+    			attr_dev(div10, "class", "animate gomomozono svelte-anzma0");
+    			add_location(div10, file$2, 273, 4, 5657);
+    			attr_dev(div11, "class", "animate kokaku svelte-anzma0");
+    			add_location(div11, file$2, 279, 4, 5898);
+    			attr_dev(div12, "class", "animate ninko svelte-anzma0");
+    			add_location(div12, file$2, 285, 4, 6112);
+    			attr_dev(div13, "class", "animate komei svelte-anzma0");
+    			add_location(div13, file$2, 291, 4, 6321);
+    			add_location(nav, file$2, 212, 2, 3359);
     		},
 
     		m: function mount(target, anchor) {
@@ -3110,7 +3127,7 @@ var app = (function (exports) {
     			destroy_component(link13);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$1.name, type: "slot", source: "(217:0) <Router url=\"{url}\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$1.name, type: "slot", source: "(212:0) <Router url=\"{url}\">", ctx });
     	return block;
     }
 
@@ -3132,7 +3149,7 @@ var app = (function (exports) {
     			t = space();
     			router.$$.fragment.c();
     			attr_dev(div, "class", "wrapper");
-    			add_location(div, file$2, 215, 0, 3685);
+    			add_location(div, file$2, 210, 0, 3308);
     		},
 
     		l: function claim(nodes) {
@@ -3308,7 +3325,7 @@ var app = (function (exports) {
 	   VALUES ?herkomstLabel { "Japan" } .
 	  
 	   FILTER langMatches(lang(?title), "ned")
-	} GROUP BY ?cho LIMIT 10
+	} GROUP BY ?cho
 	`;
 
     	function runQuery(url, query){
@@ -3345,20 +3362,20 @@ var app = (function (exports) {
     			span3 = element("span");
     			t4 = text("Founded at: ");
     			t5 = text(t5_value);
-    			attr_dev(h3, "class", "svelte-s8yzik");
-    			add_location(h3, file$4, 130, 4, 2955);
-    			attr_dev(span0, "class", "card-title svelte-s8yzik");
-    			add_location(span0, file$4, 129, 2, 2925);
-    			attr_dev(span1, "class", "card-header svelte-s8yzik");
+    			attr_dev(h3, "class", "svelte-1obbbx5");
+    			add_location(h3, file$4, 140, 4, 2720);
+    			attr_dev(span0, "class", "card-title svelte-1obbbx5");
+    			add_location(span0, file$4, 139, 2, 2690);
+    			attr_dev(span1, "class", "card-header svelte-1obbbx5");
     			set_style(span1, "background-image", "url(" + ctx.Showdata.uniqueImage.value + ")");
-    			add_location(span1, file$4, 128, 2, 2835);
-    			attr_dev(span2, "class", "card-summary svelte-s8yzik");
-    			add_location(span2, file$4, 133, 2, 3015);
-    			attr_dev(span3, "class", "card-meta svelte-s8yzik");
-    			add_location(span3, file$4, 136, 2, 3176);
-    			attr_dev(a, "class", "card svelte-s8yzik");
+    			add_location(span1, file$4, 138, 2, 2600);
+    			attr_dev(span2, "class", "card-summary svelte-1obbbx5");
+    			add_location(span2, file$4, 143, 2, 2780);
+    			attr_dev(span3, "class", "card-meta svelte-1obbbx5");
+    			add_location(span3, file$4, 146, 2, 2941);
+    			attr_dev(a, "class", "card svelte-1obbbx5");
     			attr_dev(a, "href", "/");
-    			add_location(a, file$4, 127, 0, 2807);
+    			add_location(a, file$4, 137, 0, 2572);
     		},
 
     		l: function claim(nodes) {
@@ -3475,22 +3492,22 @@ var app = (function (exports) {
     			t6 = space();
     			p1 = element("p");
     			t7 = text(ctx.description);
-    			attr_dev(h10, "class", "svelte-p4g6op");
-    			add_location(h10, file$5, 46, 8, 579);
-    			attr_dev(h11, "class", "svelte-p4g6op");
-    			add_location(h11, file$5, 47, 8, 604);
-    			attr_dev(div0, "class", "innerwrapper svelte-p4g6op");
-    			add_location(div0, file$5, 45, 4, 543);
-    			attr_dev(p0, "class", "svelte-p4g6op");
-    			add_location(p0, file$5, 49, 4, 636);
+    			attr_dev(h10, "class", "svelte-1ab9jtj");
+    			add_location(h10, file$5, 46, 8, 542);
+    			attr_dev(h11, "class", "svelte-1ab9jtj");
+    			add_location(h11, file$5, 47, 8, 567);
+    			attr_dev(div0, "class", "innerwrapper svelte-1ab9jtj");
+    			add_location(div0, file$5, 45, 4, 506);
+    			attr_dev(p0, "class", "svelte-1ab9jtj");
+    			add_location(p0, file$5, 49, 4, 599);
     			attr_dev(img, "src", ctx.image);
     			attr_dev(img, "alt", ctx.title);
-    			attr_dev(img, "class", "svelte-p4g6op");
-    			add_location(img, file$5, 50, 4, 654);
-    			attr_dev(p1, "class", "svelte-p4g6op");
-    			add_location(p1, file$5, 51, 4, 694);
-    			attr_dev(div1, "class", "wrapper svelte-p4g6op");
-    			add_location(div1, file$5, 44, 0, 517);
+    			attr_dev(img, "class", "svelte-1ab9jtj");
+    			add_location(img, file$5, 50, 4, 617);
+    			attr_dev(p1, "class", "svelte-1ab9jtj");
+    			add_location(p1, file$5, 51, 4, 657);
+    			attr_dev(div1, "class", "wrapper svelte-1ab9jtj");
+    			add_location(div1, file$5, 44, 0, 480);
     		},
 
     		l: function claim(nodes) {
@@ -3661,7 +3678,7 @@ var app = (function (exports) {
     	return child_ctx;
     }
 
-    // (78:12) {:else}
+    // (128:12) {:else}
     function create_else_block$1(ctx) {
     	var t;
 
@@ -3680,11 +3697,11 @@ var app = (function (exports) {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$1.name, type: "else", source: "(78:12) {:else}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$1.name, type: "else", source: "(128:12) {:else}", ctx });
     	return block;
     }
 
-    // (75:8) {#each data as Showdata}
+    // (126:8) {#each filteredData as Showdata}
     function create_each_block(ctx) {
     	var current;
 
@@ -3705,7 +3722,7 @@ var app = (function (exports) {
 
     		p: function update(changed, ctx) {
     			var showdata_changes = {};
-    			if (changed.data) showdata_changes.Showdata = ctx.Showdata;
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
     			showdata.$set(showdata_changes);
     		},
 
@@ -3725,7 +3742,7 @@ var app = (function (exports) {
     			destroy_component(showdata, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(75:8) {#each data as Showdata}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(126:8) {#each filteredData as Showdata}", ctx });
     	return block;
     }
 
@@ -3743,7 +3760,7 @@ var app = (function (exports) {
     		$$inline: true
     	});
 
-    	let each_value = ctx.data;
+    	let each_value = ctx.filteredData;
 
     	let each_blocks = [];
 
@@ -3772,10 +3789,10 @@ var app = (function (exports) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			attr_dev(div0, "class", "cards svelte-ta2yal");
-    			add_location(div0, file$6, 73, 4, 2167);
-    			attr_dev(div1, "class", "container svelte-ta2yal");
-    			add_location(div1, file$6, 72, 0, 2139);
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$6, 124, 4, 5560);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$6, 123, 0, 5532);
     		},
 
     		l: function claim(nodes) {
@@ -3800,8 +3817,8 @@ var app = (function (exports) {
     		},
 
     		p: function update(changed, ctx) {
-    			if (changed.data) {
-    				each_value = ctx.data;
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
 
     				let i;
     				for (i = 0; i < each_value.length; i += 1) {
@@ -3878,31 +3895,92 @@ var app = (function (exports) {
 
     function instance$7($$self, $$props, $$invalidate) {
     	
-
+        
         let data = [];
-        let jaartal = [];
+        let filteredData = [];
 
         onMount( async () => {
+            // wacht totdat de data is ingeladen en zet het dan in de lege array gemaand data
+            data = await results();
 
-            $$invalidate('data', data = await results());
+            // console.log(data.map(el => el.uniqueJaartal.value === "1619").filter(e => e)) 
 
-            for (let i=0; i< data.length; i++) { 
-                jaartal.push(data[i].uniqueJaartal.value);
-            } 
+            /**
+             * Geeft een array terug met de te matchen jaren
+             * 
+             * @return {Array}
+             */
+            const getDates = (dates) => {
+                // Check of de/het jaartal(len) die je wilt checken een streepje heeft.
+                // Wanneer het een streepje heeft, is het een periode in plaats van een
+                // specifiek jaartal
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    // split de twee jaartallen op het streepje, en cast beide jaartallen
+                    // naar een integer, zodat deze later vergeleken kunnen worden met de jaar- 
+                    // tallen van de resultaten
+                    // Array.map() loopt over alle waarden in de array heen en muteert de waarde (e)
+                    // op die plek in de array. Bij deze loop worden whitespaces weggehaald en
+                    // van strings dus integers gemaakt
+                    // ["100 ", "200"] wordt dan [100, 200]
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+                    // Wanneer er geen streepje in het jaartal, moet deze in ieder geval een 
+                    // valide getal zijn. isNan() checkt daar op (is Not A Number)
+                    // en als het een getal is, cast hij hem naar een getal
+                    return [parseInt(dates.trim())];
+                }
+
+                // geen jaartal, met of zonder streepje. Someone fucked it up
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1646");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+                // zet jaartallen van het artikel in een array, zoals boven beschreven
+                const dates = getDates(el.uniqueJaartal.value);
+                // Wanneer er geen streepje is
+                if (dates.length === 1) {
+                    // kijk of de te checken jaartal een streepje heeft
+                    return yearToCheck.length === 1 ? 
+                        // geen streepje, dan gewoon 1-op-1 checken
+                        yearToCheck[0] === dates[0] :
+                        // wel een streepje? Dan moet het begin van de te checken periode minder zijn dan 
+                        // het jaartal van het artikel, en het einde van de te checken periode meer.
+                        // Dus -> "1828 - 1856" filteren -> 1828 is minder dan bijv. 1855 en 1856 is meer, dus 1855 
+                        // wordt meegenomen in de filtering
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+                    // Check van een periode, aangezien er een streepje zit in het jaartal van het artikel
+                    return yearToCheck.length === 1 ? 
+                        // er wordt gecheckt op 1 jaartal, dan moet deze binnen de periode liggen van het artikel
+                        // dus meer dan de begin van die periode, en minder dan het einde van die periode 
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+                        // Er zit ee nstreepje in beide jaartallen, dan moeten de jaartallen van de te checken periode
+                        // binnen de jaartallen van de periode van het artikelliggen.
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+                // wanneer dates.length >= 3 of 0 is, is dit geen valide datum of periode, waardoor 
+                // dit artikel sowieso niet meegenomen wordt in de filtering. 
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
         });
-
-        console.log("test", jaartal);
 
     	$$self.$capture_state = () => {
     		return {};
     	};
 
     	$$self.$inject_state = $$props => {
-    		if ('data' in $$props) $$invalidate('data', data = $$props.data);
-    		if ('jaartal' in $$props) jaartal = $$props.jaartal;
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
     	};
 
-    	return { data };
+    	return { filteredData };
     }
 
     class Gokomyo extends SvelteComponentDev {
@@ -3915,29 +3993,3968 @@ var app = (function (exports) {
 
     /* src/pages/Gomizunoo.svelte generated by Svelte v3.12.1 */
 
-    function create_fragment$9(ctx) {
+    const file$7 = "src/pages/Gomizunoo.svelte";
+
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (128:12) {:else}
+    function create_else_block$2(ctx) {
+    	var t;
+
     	const block = {
-    		c: noop,
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$2.name, type: "else", source: "(128:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (126:8) {#each filteredData as Showdata}
+    function create_each_block$1(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(126:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$9(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Go-Mizunoo",
+    		years: "1611–1629",
+    		name: "Kotohito",
+    		image: "images/Emperor_Go-Mizunoo.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$2(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$7, 124, 4, 5477);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$7, 123, 0, 5449);
+    		},
 
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
 
-    		m: noop,
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: noop
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$2(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
     	};
     	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$9.name, type: "component", source: "", ctx });
     	return block;
     }
 
+    function instance$8($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            // console.log(data.map(el => el.uniqueJaartal.value === "1619").filter(e => e)) 
+
+            /**
+             * Geeft een array terug met de te matchen jaren
+             * 
+             * @return {Array}
+             */
+            const getDates = (dates) => {
+                // Check of de/het jaartal(len) die je wilt checken een streepje heeft.
+                // Wanneer het een streepje heeft, is het een periode in plaats van een
+                // specifiek jaartal
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    // split de twee jaartallen op het streepje, en cast beide jaartallen
+                    // naar een integer, zodat deze later vergeleken kunnen worden met de jaar- 
+                    // tallen van de resultaten
+                    // Array.map() loopt over alle waarden in de array heen en muteert de waarde (e)
+                    // op die plek in de array. Bij deze loop worden whitespaces weggehaald en
+                    // van strings dus integers gemaakt
+                    // ["100 ", "200"] wordt dan [100, 200]
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+                    // Wanneer er geen streepje in het jaartal, moet deze in ieder geval een 
+                    // valide getal zijn. isNan() checkt daar op (is Not A Number)
+                    // en als het een getal is, cast hij hem naar een getal
+                    return [parseInt(dates.trim())];
+                }
+
+                // geen jaartal, met of zonder streepje. Someone fucked it up
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1600 - 1624");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+                // zet jaartallen van het artikel in een array, zoals boven beschreven
+                const dates = getDates(el.uniqueJaartal.value);
+                // Wanneer er geen streepje is
+                if (dates.length === 1) {
+                    // kijk of de te checken jaartal een streepje heeft
+                    return yearToCheck.length === 1 ? 
+                        // geen streepje, dan gewoon 1-op-1 checken
+                        yearToCheck[0] === dates[0] :
+                        // wel een streepje? Dan moet het begin van de te checken periode minder zijn dan 
+                        // het jaartal van het artikel, en het einde van de te checken periode meer.
+                        // Dus -> "1828 - 1856" filteren -> 1828 is minder dan bijv. 1855 en 1856 is meer, dus 1855 
+                        // wordt meegenomen in de filtering
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+                    // Check van een periode, aangezien er een streepje zit in het jaartal van het artikel
+                    return yearToCheck.length === 1 ? 
+                        // er wordt gecheckt op 1 jaartal, dan moet deze binnen de periode liggen van het artikel
+                        // dus meer dan de begin van die periode, en minder dan het einde van die periode 
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+                        // Er zit ee nstreepje in beide jaartallen, dan moeten de jaartallen van de te checken periode
+                        // binnen de jaartallen van de periode van het artikelliggen.
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+                // wanneer dates.length >= 3 of 0 is, is dit geen valide datum of periode, waardoor 
+                // dit artikel sowieso niet meegenomen wordt in de filtering. 
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
     class Gomizunoo extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, null, create_fragment$9, safe_not_equal, []);
+    		init(this, options, instance$8, create_fragment$9, safe_not_equal, []);
     		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Gomizunoo", options, id: create_fragment$9.name });
+    	}
+    }
+
+    /* src/pages/Gomomozono.svelte generated by Svelte v3.12.1 */
+
+    const file$8 = "src/pages/Gomomozono.svelte";
+
+    function get_each_context$2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (128:12) {:else}
+    function create_else_block$3(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$3.name, type: "else", source: "(128:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (126:8) {#each filteredData as Showdata}
+    function create_each_block$2(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$2.name, type: "each", source: "(126:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$a(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Go-Momozono",
+    		years: "1771–1779",
+    		name: "Hidehito",
+    		image: "images/1024px-Emperor_Go-Momozono.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$3(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$8, 124, 4, 5578);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$8, 123, 0, 5550);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$3(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$a.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$9($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+            // Wacht totdat hij de data binnen heeft gekregen en stopt dit in de lege data array
+            data = await results();
+
+            // console.log(data.map(el => el.uniqueJaartal.value === "1619").filter(e => e)) 
+
+            /**
+             * Geeft een array terug met de te matchen jaren
+             * 
+             * @return {Array}
+             */
+            const getDates = (dates) => {
+                // Check of de/het jaartal(len) die je wilt checken een streepje heeft.
+                // Wanneer het een streepje heeft, is het een periode in plaats van een
+                // specifiek jaartal
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    // split de twee jaartallen op het streepje, en cast beide jaartallen
+                    // naar een integer, zodat deze later vergeleken kunnen worden met de jaar- 
+                    // tallen van de resultaten
+                    // Array.map() loopt over alle waarden in de array heen en muteert de waarde (e)
+                    // op die plek in de array. Bij deze loop worden whitespaces weggehaald en
+                    // van strings dus integers gemaakt
+                    // ["100 ", "200"] wordt dan [100, 200]
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+                    // Wanneer er geen streepje in het jaartal, moet deze in ieder geval een 
+                    // valide getal zijn. isNan() checkt daar op (is Not A Number)
+                    // en als het een getal is, cast hij hem naar een getal
+                    return [parseInt(dates.trim())];
+                }
+
+                // geen jaartal, met of zonder streepje. Someone fucked it up
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1771 - 1779");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+                // zet jaartallen van het artikel in een array, zoals boven beschreven
+                const dates = getDates(el.uniqueJaartal.value);
+                // Wanneer er geen streepje is
+                if (dates.length === 1) {
+                    // kijk of de te checken jaartal een streepje heeft
+                    return yearToCheck.length === 1 ? 
+                        // geen streepje, dan gewoon 1-op-1 checken
+                        yearToCheck[0] === dates[0] :
+                        // wel een streepje? Dan moet het begin van de te checken periode minder zijn dan 
+                        // het jaartal van het artikel, en het einde van de te checken periode meer.
+                        // Dus -> "1828 - 1856" filteren -> 1828 is minder dan bijv. 1855 en 1856 is meer, dus 1855 
+                        // wordt meegenomen in de filtering
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+                    // Check van een periode, aangezien er een streepje zit in het jaartal van het artikel
+                    return yearToCheck.length === 1 ? 
+                        // er wordt gecheckt op 1 jaartal, dan moet deze binnen de periode liggen van het artikel
+                        // dus meer dan de begin van die periode, en minder dan het einde van die periode 
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+                        // Er zit ee nstreepje in beide jaartallen, dan moeten de jaartallen van de te checken periode
+                        // binnen de jaartallen van de periode van het artikelliggen.
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+                // wanneer dates.length >= 3 of 0 is, is dit geen valide datum of periode, waardoor 
+                // dit artikel sowieso niet meegenomen wordt in de filtering. 
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Gomomozono extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$9, create_fragment$a, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Gomomozono", options, id: create_fragment$a.name });
+    	}
+    }
+
+    /* src/pages/Gosai.svelte generated by Svelte v3.12.1 */
+
+    const file$9 = "src/pages/Gosai.svelte";
+
+    function get_each_context$3(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$4(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$4.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$3(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$3.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$b(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Go-Sai",
+    		years: "1655–1663",
+    		name: "Nagahito",
+    		image: "images/Emperor_Go-Sai.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$4(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$9, 99, 4, 2922);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$9, 98, 0, 2894);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$3(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$3(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$4(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$b.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$a($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+
+                    return [parseInt(dates.trim())];
+                }
+
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1630 – 1670");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Gosai extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$a, create_fragment$b, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Gosai", options, id: create_fragment$b.name });
+    	}
+    }
+
+    /* src/pages/Gosakuramachi.svelte generated by Svelte v3.12.1 */
+
+    const file$a = "src/pages/Gosakuramachi.svelte";
+
+    function get_each_context$4(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (128:12) {:else}
+    function create_else_block$5(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$5.name, type: "else", source: "(128:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (126:8) {#each filteredData as Showdata}
+    function create_each_block$4(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$4.name, type: "each", source: "(126:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$c(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Empress Go-Sakuramachi",
+    		years: "1762–1771",
+    		name: "Toshiko",
+    		image: "images/Empress_Go-Sakuramachi.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$5(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$a, 124, 4, 5484);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$a, 123, 0, 5456);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$4(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$4(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$5(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$c.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$b($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            // console.log(data.map(el => el.uniqueJaartal.value === "1619").filter(e => e)) 
+
+            /**
+             * Geeft een array terug met de te matchen jaren
+             * 
+             * @return {Array}
+             */
+            const getDates = (dates) => {
+                // Check of de/het jaartal(len) die je wilt checken een streepje heeft.
+                // Wanneer het een streepje heeft, is het een periode in plaats van een
+                // specifiek jaartal
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    // split de twee jaartallen op het streepje, en cast beide jaartallen
+                    // naar een integer, zodat deze later vergeleken kunnen worden met de jaar- 
+                    // tallen van de resultaten
+                    // Array.map() loopt over alle waarden in de array heen en muteert de waarde (e)
+                    // op die plek in de array. Bij deze loop worden whitespaces weggehaald en
+                    // van strings dus integers gemaakt
+                    // ["100 ", "200"] wordt dan [100, 200]
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+                    // Wanneer er geen streepje in het jaartal, moet deze in ieder geval een 
+                    // valide getal zijn. isNan() checkt daar op (is Not A Number)
+                    // en als het een getal is, cast hij hem naar een getal
+                    return [parseInt(dates.trim())];
+                }
+
+                // geen jaartal, met of zonder streepje. Someone fucked it up
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1762 - 1771");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+                // zet jaartallen van het artikel in een array, zoals boven beschreven
+                const dates = getDates(el.uniqueJaartal.value);
+                // Wanneer er geen streepje is
+                if (dates.length === 1) {
+                    // kijk of de te checken jaartal een streepje heeft
+                    return yearToCheck.length === 1 ? 
+                        // geen streepje, dan gewoon 1-op-1 checken
+                        yearToCheck[0] === dates[0] :
+                        // wel een streepje? Dan moet het begin van de te checken periode minder zijn dan 
+                        // het jaartal van het artikel, en het einde van de te checken periode meer.
+                        // Dus -> "1828 - 1856" filteren -> 1828 is minder dan bijv. 1855 en 1856 is meer, dus 1855 
+                        // wordt meegenomen in de filtering
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+                    // Check van een periode, aangezien er een streepje zit in het jaartal van het artikel
+                    return yearToCheck.length === 1 ? 
+                        // er wordt gecheckt op 1 jaartal, dan moet deze binnen de periode liggen van het artikel
+                        // dus meer dan de begin van die periode, en minder dan het einde van die periode 
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+                        // Er zit ee nstreepje in beide jaartallen, dan moeten de jaartallen van de te checken periode
+                        // binnen de jaartallen van de periode van het artikelliggen.
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+                // wanneer dates.length >= 3 of 0 is, is dit geen valide datum of periode, waardoor 
+                // dit artikel sowieso niet meegenomen wordt in de filtering. 
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Gosakuramachi extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$b, create_fragment$c, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Gosakuramachi", options, id: create_fragment$c.name });
+    	}
+    }
+
+    /* src/pages/Nakamikado.svelte generated by Svelte v3.12.1 */
+
+    const file$b = "src/pages/Nakamikado.svelte";
+
+    function get_each_context$5(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$6(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$6.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$5(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$5.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$d(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Nakamikado",
+    		years: "1709–1735",
+    		name: "Yasuhito/Yoshihito",
+    		image: "images/Emperor_Nakamikado.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$6(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$b, 99, 4, 2940);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$b, 98, 0, 2912);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$5(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$5(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$6(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$d.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$c($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+
+                    return [parseInt(dates.trim())];
+                }
+
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1709 - 1735");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Nakamikado extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$c, create_fragment$d, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Nakamikado", options, id: create_fragment$d.name });
+    	}
+    }
+
+    /* src/pages/Higashiyama.svelte generated by Svelte v3.12.1 */
+
+    const file$c = "src/pages/Higashiyama.svelte";
+
+    function get_each_context$6(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$7(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$7.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$6(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$6.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$e(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Higashiyama",
+    		years: "1687–1709",
+    		name: "Asahito/Tomohito",
+    		image: "images/800px-Emperor_Higashiyama.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$6(get_each_context$6(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$7(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$c, 99, 4, 2946);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$c, 98, 0, 2918);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$6(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$6(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$7(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$e.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$d($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+
+                    return [parseInt(dates.trim())];
+                }
+
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1700 - 1709");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Higashiyama extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$d, create_fragment$e, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Higashiyama", options, id: create_fragment$e.name });
+    	}
+    }
+
+    /* src/pages/Kokaku.svelte generated by Svelte v3.12.1 */
+
+    const file$d = "src/pages/Kokaku.svelte";
+
+    function get_each_context$7(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$8(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$8.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$7(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$7.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$f(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Kōkaku",
+    		years: "1780–1817",
+    		name: "Morohito",
+    		image: "images/Emperor_Kōkaku.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$7(get_each_context$7(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$8(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$d, 99, 4, 2923);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$d, 98, 0, 2895);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$7(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$7(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$8(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$f.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$e($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+
+                    return [parseInt(dates.trim())];
+                }
+
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1780 - 1800");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+     
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Kokaku extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$e, create_fragment$f, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Kokaku", options, id: create_fragment$f.name });
+    	}
+    }
+
+    /* src/pages/Komei.svelte generated by Svelte v3.12.1 */
+
+    const file$e = "src/pages/Komei.svelte";
+
+    function get_each_context$8(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (121:12) {:else}
+    function create_else_block$9(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$9.name, type: "else", source: "(121:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (119:8) {#each filteredData as Showdata}
+    function create_each_block$8(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$8.name, type: "each", source: "(119:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$g(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Kōmei",
+    		years: "1846–1867",
+    		name: "Osahito",
+    		image: "images/800px-The_Emperor_Komei.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$8(get_each_context$8(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$9(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$e, 117, 4, 5265);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$e, 116, 0, 5237);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$8(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$8(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$9(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$g.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$f($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+                // Check of de/het jaartal(len) die je wilt checken een streepje heeft.
+                // Wanneer het een streepje heeft, is het een periode in plaats van een
+                // specifiek jaartal
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    // split de twee jaartallen op het streepje, en cast beide jaartallen
+                    // naar een integer, zodat deze later vergeleken kunnen worden met de jaar- 
+                    // tallen van de resultaten
+                    // Array.map() loopt over alle waarden in de array heen en muteert de waarde (e)
+                    // op die plek in de array. Bij deze loop worden whitespaces weggehaald en
+                    // van strings dus integers gemaakt
+                    // ["100 ", "200"] wordt dan [100, 200]
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+                    // Wanneer er geen streepje in het jaartal, moet deze in ieder geval een 
+                    // valide getal zijn. isNan() checkt daar op (is Not A Number)
+                    // en als het een getal is, cast hij hem naar een getal
+                    return [parseInt(dates.trim())];
+                }
+
+                // geen jaartal, met of zonder streepje. Someone fucked it up
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1846 - 1867");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+                // zet jaartallen van het artikel in een array, zoals boven beschreven
+                const dates = getDates(el.uniqueJaartal.value);
+                // Wanneer er geen streepje is
+                if (dates.length === 1) {
+                    // kijk of de te checken jaartal een streepje heeft
+                    return yearToCheck.length === 1 ? 
+                        // geen streepje, dan gewoon 1-op-1 checken
+                        yearToCheck[0] === dates[0] :
+                        // wel een streepje? Dan moet het begin van de te checken periode minder zijn dan 
+                        // het jaartal van het artikel, en het einde van de te checken periode meer.
+                        // Dus -> "1828 - 1856" filteren -> 1828 is minder dan bijv. 1855 en 1856 is meer, dus 1855 
+                        // wordt meegenomen in de filtering
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+                    // Check van een periode, aangezien er een streepje zit in het jaartal van het artikel
+                    return yearToCheck.length === 1 ? 
+                        // er wordt gecheckt op 1 jaartal, dan moet deze binnen de periode liggen van het artikel
+                        // dus meer dan de begin van die periode, en minder dan het einde van die periode 
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+                        // Er zit ee nstreepje in beide jaartallen, dan moeten de jaartallen van de te checken periode
+                        // binnen de jaartallen van de periode van het artikelliggen.
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+                // wanneer dates.length >= 3 of 0 is, is dit geen valide datum of periode, waardoor 
+                // dit artikel sowieso niet meegenomen wordt in de filtering. 
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Komei extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$f, create_fragment$g, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Komei", options, id: create_fragment$g.name });
+    	}
+    }
+
+    /* src/pages/Meisho.svelte generated by Svelte v3.12.1 */
+
+    const file$f = "src/pages/Meisho.svelte";
+
+    function get_each_context$9(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$a(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$a.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$9(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$9.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$h(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Empress Meishō",
+    		years: "1629–1643",
+    		name: "Okiko",
+    		image: "images/Meisho_of_Japan.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$9(get_each_context$9(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$a(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$f, 99, 4, 2914);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$f, 98, 0, 2886);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$9(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$9(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$a(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$h.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$g($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+
+                    return [parseInt(dates.trim())];
+                }
+
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1636");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+     
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Meisho extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$g, create_fragment$h, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Meisho", options, id: create_fragment$h.name });
+    	}
+    }
+
+    /* src/pages/Momozono.svelte generated by Svelte v3.12.1 */
+
+    const file$g = "src/pages/Momozono.svelte";
+
+    function get_each_context$a(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$b(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$b.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$a(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$a.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$i(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Momozono",
+    		years: "1747–1762",
+    		name: "Toohito",
+    		image: "images/1280px-Emperor_Momozono.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$a(get_each_context$a(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$b(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$g, 99, 4, 2933);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$g, 98, 0, 2905);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$a(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$a(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$b(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$i.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$h($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+
+                    return [parseInt(dates.trim())];
+                }
+
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1747 - 1762");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+     
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Momozono extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$h, create_fragment$i, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Momozono", options, id: create_fragment$i.name });
+    	}
+    }
+
+    /* src/pages/Ninko.svelte generated by Svelte v3.12.1 */
+
+    const file$h = "src/pages/Ninko.svelte";
+
+    function get_each_context$b(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$c(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$c.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$b(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$b.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$j(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Ninkō",
+    		years: "1817–1846",
+    		name: "Ayahito",
+    		image: "images/Emperor_Ninkō.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$b(get_each_context$b(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$c(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$h, 99, 4, 2919);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$h, 98, 0, 2891);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$b(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$b(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$c(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$j.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$i($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+
+                    return [parseInt(dates.trim())];
+                }
+
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1817 - 1846");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Ninko extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$i, create_fragment$j, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Ninko", options, id: create_fragment$j.name });
+    	}
+    }
+
+    /* src/pages/Reigen.svelte generated by Svelte v3.12.1 */
+
+    const file$i = "src/pages/Reigen.svelte";
+
+    function get_each_context$c(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$d(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$d.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$c(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$c.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$k(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Reigen",
+    		years: "1663–1687",
+    		name: "Satohito",
+    		image: "images/Emperor_Reigen.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$c(get_each_context$c(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$d(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$i, 99, 4, 2995);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$i, 98, 0, 2967);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$c(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$c(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$d(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$k.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$j($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+                    return [parseInt(dates.trim())];
+                }
+
+                // geen jaartal, met of zonder streepje. Someone fucked it up
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1655 - 1690");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Reigen extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$j, create_fragment$k, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Reigen", options, id: create_fragment$k.name });
+    	}
+    }
+
+    /* src/pages/Sakuramachi.svelte generated by Svelte v3.12.1 */
+
+    const file$j = "src/pages/Sakuramachi.svelte";
+
+    function get_each_context$d(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.Showdata = list[i];
+    	return child_ctx;
+    }
+
+    // (103:12) {:else}
+    function create_else_block$e(ctx) {
+    	var t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading...");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(t);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$e.name, type: "else", source: "(103:12) {:else}", ctx });
+    	return block;
+    }
+
+    // (101:8) {#each filteredData as Showdata}
+    function create_each_block$d(ctx) {
+    	var current;
+
+    	var showdata = new Showdata_1({
+    		props: { Showdata: ctx.Showdata },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			showdata.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(showdata, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var showdata_changes = {};
+    			if (changed.filteredData) showdata_changes.Showdata = ctx.Showdata;
+    			showdata.$set(showdata_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(showdata.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(showdata.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(showdata, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$d.name, type: "each", source: "(101:8) {#each filteredData as Showdata}", ctx });
+    	return block;
+    }
+
+    function create_fragment$l(ctx) {
+    	var t, div1, div0, current;
+
+    	var extradata = new Extradata({
+    		props: {
+    		title: "Emperor Sakuramachi",
+    		years: "1735–1747",
+    		name: "Teruhito",
+    		image: "images/Emperor_Sakuramachi.jpg",
+    		description: "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n    \n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do \n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    	},
+    		$$inline: true
+    	});
+
+    	let each_value = ctx.filteredData;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$d(get_each_context$d(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	let each_1_else = null;
+
+    	if (!each_value.length) {
+    		each_1_else = create_else_block$e(ctx);
+    		each_1_else.c();
+    	}
+
+    	const block = {
+    		c: function create() {
+    			extradata.$$.fragment.c();
+    			t = space();
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "cards svelte-e1ainw");
+    			add_location(div0, file$j, 99, 4, 2933);
+    			attr_dev(div1, "class", "container svelte-e1ainw");
+    			add_location(div1, file$j, 98, 0, 2905);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(extradata, target, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+
+    			if (each_1_else) {
+    				each_1_else.m(div0, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.filteredData) {
+    				each_value = ctx.filteredData;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$d(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$d(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (each_value.length) {
+    				if (each_1_else) {
+    					each_1_else.d(1);
+    					each_1_else = null;
+    				}
+    			} else if (!each_1_else) {
+    				each_1_else = create_else_block$e(ctx);
+    				each_1_else.c();
+    				each_1_else.m(div0, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(extradata.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(extradata.$$.fragment, local);
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(extradata, detaching);
+
+    			if (detaching) {
+    				detach_dev(t);
+    				detach_dev(div1);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (each_1_else) each_1_else.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$l.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$k($$self, $$props, $$invalidate) {
+    	
+
+        let data = [];
+        let filteredData = [];
+
+        onMount( async () => {
+
+            data = await results();
+
+            const getDates = (dates) => {
+
+                if (/^(\d+(|\s))-((|\s)\d+)$/.test(dates)) {
+
+                    return dates.split('-').map(e => parseInt(e.trim()));
+                } else if (!isNaN(dates)) {
+
+                    return [parseInt(dates.trim())];
+                }
+
+                return [];
+            };
+
+            // jaartallen die je wilt checken
+            const yearToCheck = getDates("1730 - 1749");
+
+            $$invalidate('filteredData', filteredData = data.filter(el => {
+
+                const dates = getDates(el.uniqueJaartal.value);
+
+                if (dates.length === 1) {
+
+                    return yearToCheck.length === 1 ? 
+
+                        yearToCheck[0] === dates[0] :
+
+                        yearToCheck[0] <= dates[0] && yearToCheck[1] >= dates[0];
+                } else if (dates.length === 2) {
+
+                    return yearToCheck.length === 1 ? 
+     
+                        yearToCheck[0] >= dates[0] && yearToCheck[0] <= dates[1] :
+
+                        yearToCheck[0] >= dates[0] && yearToCheck[1] <= dates[1];
+                }
+
+                return false;
+            }));
+
+            console.log(filteredData);
+            console.log("test2", filteredData);
+        });
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('data' in $$props) data = $$props.data;
+    		if ('filteredData' in $$props) $$invalidate('filteredData', filteredData = $$props.filteredData);
+    	};
+
+    	return { filteredData };
+    }
+
+    class Sakuramachi extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$k, create_fragment$l, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Sakuramachi", options, id: create_fragment$l.name });
     	}
     }
 
@@ -3950,18 +7967,19 @@ var app = (function (exports) {
 
     exports.Gokomyo = Gokomyo;
     exports.Gomizunoo = Gomizunoo;
-    exports.Gomomozono = Gomizunoo;
-    exports.Gosai = Gomizunoo;
-    exports.Gosakuramachi = Gomizunoo;
-    exports.Higashiyama = Gomizunoo;
+    exports.Gomomozono = Gomomozono;
+    exports.Gosai = Gosai;
+    exports.Gosakuramachi = Gosakuramachi;
+    exports.Higashiyama = Higashiyama;
     exports.Home = Home;
-    exports.Kokaku = Gomizunoo;
-    exports.Komei = Gomizunoo;
-    exports.Meisho = Gomizunoo;
-    exports.Momozono = Gomizunoo;
-    exports.Ninko = Gomizunoo;
-    exports.Reigen = Gomizunoo;
-    exports.Sakuramachi = Gomizunoo;
+    exports.Kokaku = Kokaku;
+    exports.Komei = Komei;
+    exports.Meisho = Meisho;
+    exports.Momozono = Momozono;
+    exports.Nakamikado = Nakamikado;
+    exports.Ninko = Ninko;
+    exports.Reigen = Reigen;
+    exports.Sakuramachi = Sakuramachi;
     exports.default = app;
 
     return exports;

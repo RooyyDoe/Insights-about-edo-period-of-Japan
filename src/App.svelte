@@ -43,6 +43,7 @@
     <Route path="Gosai" component="{Collection.Gosai}" />
     <Route path="Gosakuramachi" component="{Collection.Gosakuramachi}" />
     <Route path="Higashiyama" component="{Collection.Higashiyama}" />
+	<Route path="Nakamikado" component="{Collection.Nakamikado}" />
     <Route path="Kokaku" component="{Collection.Kokaku}" />
 	<Route path="Komei" component="{Collection.Komei}" />
     <Route path="Meisho" component="{Collection.Meisho}" />

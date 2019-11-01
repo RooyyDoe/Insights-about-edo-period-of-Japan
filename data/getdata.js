@@ -25,7 +25,7 @@ export default function() {
 	   VALUES ?herkomstLabel { "Japan" } .
 	  
 	   FILTER langMatches(lang(?title), "ned")
-	} GROUP BY ?cho LIMIT 10
+	} GROUP BY ?cho
 	`;
 
 	function runQuery(url, query){
